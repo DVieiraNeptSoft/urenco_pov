@@ -1,0 +1,13 @@
+var cylinder = txtCylinder.getValue();
+
+if (cylinder !== "") {
+    var options = {
+        parameters: {
+            //"$select": "", // Optional
+            "sap-client": "100", // Required
+            I_CYLINDER: cylinder,
+        },
+    };
+    
+    apiapiGetSAPInfoByCylinder(options);
+}

@@ -1,0 +1,28 @@
+var uqform = modelPageForm.getData();
+var options = {};
+
+if (!validateFields()) {
+    return;
+}
+
+if (uqform !== null && uqform.id !== undefined && uqform.id !== "") {
+    //Record already exists - updating data only
+    options = {
+        parameters: {
+            where: JSON.stringify({ id: uqform.id }),
+        },
+        data: uqform,
+    };
+} else {
+    //Creating new record
+    uqform.status = 1;
+    options = {
+        parameters: {
+            where: "",
+        },
+        data: uqform,
+    };
+}
+
+actionType = "";
+apiapiSaveUQForm(options);

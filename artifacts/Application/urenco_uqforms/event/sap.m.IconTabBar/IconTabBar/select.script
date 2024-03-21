@@ -1,0 +1,53 @@
+var uqform = modelPageForm.getData();
+var isSupervisor = false;
+
+butApprove.setVisible(false);
+butSubmit.setVisible(false);
+
+isSupervisor = isUserSupervisor();
+
+switch (IconTabBar.getSelectedKey()) {
+    case "initial":
+        if (uqform.status === 1) {
+            butSubmit.setVisible(true);
+        }
+        break;
+
+    case "initialapproval":
+        if ((uqform.status === 2) & isSupervisor) {
+            butApprove.setVisible(true);
+        }
+        break;
+
+    case "dispensing":
+        if (uqform.status === 3) {
+            butSubmit.setVisible(true);
+        }
+        break;
+
+    case "labelapproval":
+        if ((uqform.status === 4) & isSupervisor) {
+            butApprove.setVisible(true);
+        }
+        break;
+
+    case "final":
+        if (uqform.status === 5) {
+            butSubmit.setVisible(true);
+        }
+
+        //IMPLEMENT THIS!!!
+        //calculateP10Weights();
+        //Show Panel11 if there are no P10s
+
+        break;
+
+    case "finalapproval":
+        if ((uqform.status === 6) & isSupervisor) {
+            butApprove.setVisible(true);
+        }
+        break;
+
+    default:
+    // code
+}

@@ -1,0 +1,3 @@
+const binding = ListViewDeliveries.getBinding("items");
+const filter = new sap.ui.model.Filter("title", "Contains", this.getValue());
+binding.filter([filter]);

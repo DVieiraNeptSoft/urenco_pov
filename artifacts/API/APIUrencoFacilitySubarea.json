@@ -1,0 +1,346 @@
+{
+	"id": "e618642a-9a0a-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-14T09:59:35.793Z",
+	"createdBy": "masoom",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "45c47cc5-867c-4581-8fd3-8637c4d44564",
+			"path": "/urenco_facility_subarea",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				},
+				{
+					"name": "select",
+					"description": "fieldName1,fieldName2,fieldName3"
+				},
+				{
+					"name": "take",
+					"description": "Limit (paginated) - max number of entities that should be taken"
+				},
+				{
+					"name": "skip",
+					"description": "Offset (paginated) from where entities should be taken"
+				},
+				{
+					"name": "order",
+					"description": "{\"fieldName1\": \"ASC\", \"fieldName2\": \"DESC\"}"
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_facility_subarea"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "df5db38c-af0e-47c3-8776-a7b350205ad7",
+			"path": "/urenco_facility_subarea",
+			"method": "PUT",
+			"headers": [],
+			"parameters": [],
+			"content": [
+				{
+					"objectType": "array",
+					"name": "urenco_facility_subarea"
+				}
+			],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_facility_subarea"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "ea566174-4b61-4874-ae2d-eb8e6e100d16",
+			"path": "/urenco_facility_subarea",
+			"method": "POST",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"example": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [
+				{
+					"objectType": "array",
+					"name": "urenco_facility_subarea"
+				}
+			],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_facility_subarea"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "ec8502d3-8f38-4761-c37d-3d440a7ac37b",
+			"path": "/urenco_facility_subarea",
+			"method": "DELETE",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"example": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_facility_subarea"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "f84879df-d082-4ae1-ec48-88b5d7e26b63",
+			"path": "/urenco_facility_subarea/count",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "count"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		}
+	],
+	"definitions": [
+		{
+			"id": "9c6380ef-187b-4cc0-e160-60df1d71151d",
+			"name": "urenco_facility_subarea",
+			"properties": [
+				{
+					"id": "7b0e9aa8-a0ef-443b-9d8f-2a8c4035a152",
+					"parent": "",
+					"name": "id",
+					"description": "Unique record ID",
+					"objectType": "string"
+				},
+				{
+					"id": "6b62ec69-dd74-4f95-f49a-cf5321298b08",
+					"parent": "",
+					"name": "FACILITY_ID",
+					"description": "Facility ID",
+					"objectType": "string"
+				},
+				{
+					"id": "70371b6a-be97-49cc-b0fd-b8c75015b749",
+					"parent": "",
+					"name": "FACILITY",
+					"description": "Facility Description",
+					"objectType": "string"
+				},
+				{
+					"id": "7dabb02c-9966-491e-dc2a-5e0028e53185",
+					"parent": "",
+					"name": "SUBAREA_ID",
+					"description": "Sub Area ID",
+					"objectType": "string"
+				},
+				{
+					"id": "ed173015-eec0-4dec-a8cb-35dd25ea9a68",
+					"parent": "",
+					"name": "SUBAREA",
+					"description": "Sub Area Description",
+					"objectType": "string"
+				},
+				{
+					"id": "ab807eb5-5172-4133-956f-3da6993c4cd3",
+					"parent": "",
+					"name": "createdAt",
+					"description": "Date when record was created",
+					"objectType": "number"
+				},
+				{
+					"id": "8365af23-07a2-438f-a0f8-5f983c5d3f9c",
+					"parent": "",
+					"name": "createdBy",
+					"description": "Created By",
+					"objectType": "string"
+				},
+				{
+					"id": "a18970b9-7717-48b3-db49-4bc46b5d4de4",
+					"parent": "",
+					"name": "updatedAt",
+					"description": "Date when record was updated",
+					"objectType": "number"
+				},
+				{
+					"id": "62f35fab-a887-4801-f8a1-31a18756e84d",
+					"parent": "",
+					"name": "updatedBy",
+					"description": "Updated By",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "96fb33a2-a63f-4e44-fd47-cd60079d48b8",
+			"name": "Error",
+			"properties": [
+				{
+					"id": "7ea81806-bbd7-492b-bfbd-43ee52415237",
+					"parent": "",
+					"name": "status",
+					"objectType": "string"
+				},
+				{
+					"id": "428ab79e-7d64-468a-f6cf-4abf2a679b71",
+					"parent": "",
+					"name": "message",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "26e6e2e7-0517-4d3f-e3f0-0142516ce911",
+			"name": "count",
+			"properties": [
+				{
+					"id": "ec3a0d1e-4084-4117-8c1f-316c397351e9",
+					"parent": "",
+					"name": "count",
+					"objectType": "number"
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "APIUrencoFacilitySubarea",
+	"endpoint": "/api/entity",
+	"ver": "23.6.14.115",
+	"version": null,
+	"description": "Operations on Facility and Subarea",
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "table",
+	"about": null,
+	"enableProxy": false,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}

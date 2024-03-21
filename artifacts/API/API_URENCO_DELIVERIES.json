@@ -1,0 +1,1859 @@
+{
+	"id": "5e64cae1-d5f8-ed11-907c-000d3a654fb6",
+	"createdAt": "2023-05-22T19:21:42.890Z",
+	"createdBy": "gabriel.andrade@neptune-software.com",
+	"auth": [
+		{
+			"role": "DEF",
+			"apiAuth": "06F522E6-F790-ED11-9F5F-000D3A66E586",
+			"authName": "N4I 100",
+			"authDesc": "N4I 100 Basic",
+			"id": "c3136f9e-dc77-4646-a308-5f33e2d86e20"
+		}
+	],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "8b3cfa00-71d9-4465-97c3-bff324c80196",
+			"path": "/GET_DELIVERIES",
+			"description": "Get deliveries information",
+			"method": "GET",
+			"responses": [
+				{
+					"status": "200",
+					"description": "Status 200",
+					"headers": [],
+					"content": [
+						{
+							"name": "getGET_DELIVERIESResponse",
+							"objectType": "reference"
+						}
+					]
+				},
+				{
+					"status": "404",
+					"description": "Status 404",
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"items": [
+								{
+									"id": "b89809a8-22b3-4159-89e3-4bb50c971670",
+									"children": [],
+									"name": "ERROR_CODE",
+									"objectType": "string",
+									"parent": "",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": "",
+									"description": "Error Code"
+								},
+								{
+									"id": "8d09fb1e-f7c1-4aae-94e3-7dc553e7ad09",
+									"children": [],
+									"name": "ERROR_TEXT",
+									"objectType": "string",
+									"parent": "",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": "",
+									"description": "Description of the error"
+								}
+							]
+						}
+					]
+				}
+			],
+			"content": [],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "$select",
+					"description": "Select fieldnames to be returned. Separated by comma",
+					"inPath": false,
+					"type": "string"
+				},
+				{
+					"name": "sap-client",
+					"description": "SAP Client",
+					"required": true,
+					"inPath": false,
+					"example": "100",
+					"type": "string"
+				},
+				{
+					"name": "MV_DATE_FROM",
+					"description": "Date",
+					"required": true,
+					"inPath": false,
+					"type": "string"
+				},
+				{
+					"name": "MV_DATE_TO",
+					"description": "Date",
+					"required": true,
+					"inPath": false,
+					"type": "string"
+				}
+			],
+			"endpoints": [],
+			"endpoint": ""
+		},
+		{
+			"id": "9a0b403f-4e55-4dfc-8404-42e56b12e7f2",
+			"path": "/UPDATE_DELIVERY_DATE",
+			"description": "Update outbound delivery - GI & Delivery Date",
+			"method": "POST",
+			"responses": [
+				{
+					"status": "200",
+					"description": "Status 200",
+					"headers": [],
+					"content": [
+						{
+							"name": "postUPDATE_DELIVERY_DATEResponse",
+							"objectType": "reference"
+						}
+					]
+				},
+				{
+					"status": "404",
+					"description": "Status 404",
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"items": [
+								{
+									"id": "ea6be8e2-b94f-441d-b5fd-c93ba443b135",
+									"children": [],
+									"name": "ERROR_CODE",
+									"objectType": "string",
+									"parent": "",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": "",
+									"description": "Error Code"
+								},
+								{
+									"id": "570db616-dbc6-4523-8054-9b0ce5b5d01c",
+									"children": [],
+									"name": "ERROR_TEXT",
+									"objectType": "string",
+									"parent": "",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": "",
+									"description": "Description of the error"
+								}
+							]
+						}
+					]
+				}
+			],
+			"content": [],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "$select",
+					"description": "Select fieldnames to be returned. Separated by comma",
+					"inPath": false,
+					"type": "string"
+				},
+				{
+					"name": "sap-client",
+					"description": "SAP Client",
+					"required": true,
+					"inPath": false,
+					"example": "100",
+					"type": "string"
+				},
+				{
+					"name": "I_VBELN",
+					"description": "Sales and Distribution Document Number",
+					"required": true,
+					"inPath": false,
+					"type": "string"
+				},
+				{
+					"name": "I_LFDAT",
+					"description": "Delivery date",
+					"required": true,
+					"inPath": false,
+					"type": "string"
+				}
+			],
+			"endpoints": [],
+			"endpoint": ""
+		}
+	],
+	"definitions": [
+		{
+			"id": "9aa3b4d9-dde3-41a1-b240-4601c938aad8",
+			"name": "dataRequest",
+			"description": "Key Value Structure",
+			"type": "object",
+			"properties": [
+				{
+					"id": "b28e87a7-3ae2-40a4-b3e8-43289a308186",
+					"children": [],
+					"name": "KEY",
+					"objectType": "string",
+					"parent": "",
+					"isParent": false,
+					"required": true,
+					"maxLength": "",
+					"minLength": "",
+					"description": "Name of dataset"
+				},
+				{
+					"id": "b388e98f-c1a0-44e2-8b71-5eee5e512486",
+					"children": [],
+					"name": "VALUE",
+					"objectType": "string",
+					"parent": "",
+					"isParent": false,
+					"required": true,
+					"maxLength": "",
+					"minLength": "",
+					"description": "JSON String of dataset"
+				}
+			]
+		},
+		{
+			"id": "8069a4c8-3f3e-4d04-aee0-324f0660cca9",
+			"name": "errorResponse",
+			"description": "Error object returned from SAP",
+			"type": "object",
+			"properties": [
+				{
+					"id": "a7cc66f1-c16e-4e12-9b2c-0bbd11a39692",
+					"children": [],
+					"name": "ERROR_CODE",
+					"objectType": "string",
+					"parent": "",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": "",
+					"description": "Error Code"
+				},
+				{
+					"id": "a09a0f54-d7c4-482c-b180-c9265b7140d3",
+					"children": [],
+					"name": "ERROR_TEXT",
+					"objectType": "string",
+					"parent": "",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": "",
+					"description": "Description of the error"
+				}
+			]
+		},
+		{
+			"id": "6053c319-f792-4191-b472-ddb91dd58f44",
+			"name": "getGET_DELIVERIESResponse",
+			"type": "object",
+			"properties": [
+				{
+					"id": "fc671c69-97eb-4828-a06d-9e92603e6a02",
+					"children": [
+						{
+							"id": "cf239e6d-3f04-4d67-8a50-b73bbf5fc087",
+							"name": "MT_HEADERS",
+							"isParent": true,
+							"objectType": "array",
+							"children": [
+								{
+									"id": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"name": "",
+									"objectType": "object",
+									"parent": "cf239e6d-3f04-4d67-8a50-b73bbf5fc087",
+									"isParent": true,
+									"children": [
+										{
+											"id": "8919db24-f141-4791-877c-dac4ee6514f5",
+											"children": [],
+											"name": "VBELN",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "10",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Delivery"
+										},
+										{
+											"id": "693384d2-9e57-4d79-8ec1-0ea2f730ac3f",
+											"children": [],
+											"name": "LFDAT",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"example": "20160831",
+											"maxLength": "10",
+											"minLength": "8",
+											"pattern": "^(\\d{4})\\-?(0[1-9]|1[0-2])\\-?(0[1-9]|[12]\\d|3[01])|0{8}$",
+											"description": "Delivery Date"
+										},
+										{
+											"id": "afdf19fb-e05f-4eef-8053-9e8577a86b2c",
+											"children": [],
+											"name": "ERNAM",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "12",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Name of Person Responsible for Creating the Object"
+										},
+										{
+											"id": "8f998a17-f3c3-4c12-9bea-9ade498e349f",
+											"children": [],
+											"name": "VSTEL",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "4",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Shipping Point / Receiving Point"
+										},
+										{
+											"id": "847ecacb-a117-4a5d-8a6b-affec5309429",
+											"children": [],
+											"name": "VKORG",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "4",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Sales Organization"
+										},
+										{
+											"id": "6bbb67b3-72c4-4660-bebc-c2e25c508693",
+											"children": [],
+											"name": "LFART",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "4",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Delivery Type"
+										},
+										{
+											"id": "1e2c11b1-784d-4589-a58e-f2578be7b91e",
+											"children": [],
+											"name": "KUNNR",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "10",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Ship-to Party"
+										},
+										{
+											"id": "8e7063e2-48f7-4cd7-8723-ccb34f66598b",
+											"children": [],
+											"name": "KUNAG",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "10",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Sold-to Party"
+										},
+										{
+											"id": "6c1701cb-f33c-478d-82b9-7d21eaf12f1f",
+											"children": [],
+											"name": "LIFNR",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "10",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Vendor's account number"
+										},
+										{
+											"id": "d6cb9d65-de0b-41be-b6b8-6d4adde34d3a",
+											"children": [],
+											"name": "NAME1",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "35",
+											"minLength": "",
+											"description": "Name 1"
+										},
+										{
+											"id": "23afcf8b-8363-41d0-95d2-2a72e478ae39",
+											"children": [],
+											"name": "SUPPLIER_NAME",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "35",
+											"minLength": "",
+											"description": "Name 1"
+										},
+										{
+											"id": "56bb13df-a1f7-444b-96dd-b82cce1b7861",
+											"children": [],
+											"name": "VGBEL",
+											"objectType": "string",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "10",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Document number of the reference document"
+										},
+										{
+											"id": "b4168fd9-2e62-4748-b872-2b733340cd23",
+											"children": [],
+											"name": "DLV_STATUS",
+											"objectType": "integer",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "",
+											"minLength": ""
+										},
+										{
+											"id": "096354ae-b0b4-457c-bba5-1cc35986377b",
+											"children": [],
+											"name": "DLV_TYPE",
+											"objectType": "integer",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "",
+											"minLength": ""
+										},
+										{
+											"id": "59e506b3-c2c8-40be-87d7-c2ff1cf68071",
+											"children": [],
+											"name": "CYL_TYPE",
+											"objectType": "integer",
+											"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+											"isParent": false,
+											"required": false,
+											"maxLength": "",
+											"minLength": ""
+										}
+									],
+									"required": false,
+									"maxLength": "",
+									"minLength": ""
+								}
+							],
+							"required": false,
+							"parent": "fc671c69-97eb-4828-a06d-9e92603e6a02",
+							"maxLength": "",
+							"minLength": ""
+						},
+						{
+							"id": "53c599a9-fb09-4efe-aa3b-d9bc5c2782fa",
+							"name": "MT_ITEMS",
+							"isParent": true,
+							"objectType": "array",
+							"children": [
+								{
+									"id": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"name": "",
+									"objectType": "object",
+									"parent": "53c599a9-fb09-4efe-aa3b-d9bc5c2782fa",
+									"isParent": true,
+									"children": [
+										{
+											"id": "dd513c7e-07cf-47e4-a6e9-c2f957556e0f",
+											"children": [],
+											"name": "VBELN",
+											"objectType": "string",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "10",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Delivery"
+										},
+										{
+											"id": "5fa92faf-5336-4e2b-9b0c-46bc7edec27b",
+											"children": [],
+											"name": "POSNR",
+											"objectType": "number",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "",
+											"minLength": "",
+											"description": "Delivery Item"
+										},
+										{
+											"id": "caa6c141-04de-4974-a7c4-af0a426d1a29",
+											"children": [],
+											"name": "MATNR",
+											"objectType": "string",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "40",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Material Number"
+										},
+										{
+											"id": "0faada52-34d2-41d7-971e-5846266b21f4",
+											"children": [],
+											"name": "WERKS",
+											"objectType": "string",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "4",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Plant"
+										},
+										{
+											"id": "5f443140-14df-42e7-a8ab-2205f964d76f",
+											"children": [],
+											"name": "LGORT",
+											"objectType": "string",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "4",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Storage location"
+										},
+										{
+											"id": "a894b4d8-83c8-4c04-9e90-b2dfb4929b0a",
+											"children": [],
+											"name": "ARKTX",
+											"objectType": "string",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "40",
+											"minLength": "",
+											"description": "Short text for sales order item"
+										},
+										{
+											"id": "3219473b-17ff-42e5-8e03-003562be039d",
+											"children": [],
+											"name": "LFIMG",
+											"objectType": "number",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "",
+											"minLength": "",
+											"description": "Actual quantity delivered (in sales units)"
+										},
+										{
+											"id": "f77565b4-2d3a-4418-81d5-144a0fe208ab",
+											"children": [],
+											"name": "MEINS",
+											"objectType": "string",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "3",
+											"minLength": "",
+											"description": "Base Unit of Measure"
+										},
+										{
+											"id": "1f35ebe4-8b11-4a73-982f-2242ff07eb8f",
+											"children": [],
+											"name": "VGBEL",
+											"objectType": "string",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "10",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Document number of the reference document"
+										},
+										{
+											"id": "4f57ecbf-e248-4c8b-81e0-731d3a52acb8",
+											"children": [],
+											"name": "VGPOS",
+											"objectType": "number",
+											"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+											"isParent": false,
+											"required": false,
+											"maxLength": "",
+											"minLength": "",
+											"description": "Item number of the reference item"
+										}
+									],
+									"required": false,
+									"maxLength": "",
+									"minLength": ""
+								}
+							],
+							"required": false,
+							"parent": "fc671c69-97eb-4828-a06d-9e92603e6a02",
+							"maxLength": "",
+							"minLength": ""
+						}
+					],
+					"name": "result",
+					"objectType": "object",
+					"parent": "",
+					"isParent": true,
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "cf239e6d-3f04-4d67-8a50-b73bbf5fc087",
+					"name": "MT_HEADERS",
+					"isParent": true,
+					"objectType": "array",
+					"children": [
+						{
+							"id": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"name": "",
+							"objectType": "object",
+							"parent": "cf239e6d-3f04-4d67-8a50-b73bbf5fc087",
+							"isParent": true,
+							"children": [
+								{
+									"id": "8919db24-f141-4791-877c-dac4ee6514f5",
+									"children": [],
+									"name": "VBELN",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "10",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Delivery"
+								},
+								{
+									"id": "693384d2-9e57-4d79-8ec1-0ea2f730ac3f",
+									"children": [],
+									"name": "LFDAT",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"example": "20160831",
+									"maxLength": "10",
+									"minLength": "8",
+									"pattern": "^(\\d{4})\\-?(0[1-9]|1[0-2])\\-?(0[1-9]|[12]\\d|3[01])|0{8}$",
+									"description": "Delivery Date"
+								},
+								{
+									"id": "afdf19fb-e05f-4eef-8053-9e8577a86b2c",
+									"children": [],
+									"name": "ERNAM",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "12",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Name of Person Responsible for Creating the Object"
+								},
+								{
+									"id": "8f998a17-f3c3-4c12-9bea-9ade498e349f",
+									"children": [],
+									"name": "VSTEL",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "4",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Shipping Point / Receiving Point"
+								},
+								{
+									"id": "847ecacb-a117-4a5d-8a6b-affec5309429",
+									"children": [],
+									"name": "VKORG",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "4",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Sales Organization"
+								},
+								{
+									"id": "6bbb67b3-72c4-4660-bebc-c2e25c508693",
+									"children": [],
+									"name": "LFART",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "4",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Delivery Type"
+								},
+								{
+									"id": "1e2c11b1-784d-4589-a58e-f2578be7b91e",
+									"children": [],
+									"name": "KUNNR",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "10",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Ship-to Party"
+								},
+								{
+									"id": "8e7063e2-48f7-4cd7-8723-ccb34f66598b",
+									"children": [],
+									"name": "KUNAG",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "10",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Sold-to Party"
+								},
+								{
+									"id": "6c1701cb-f33c-478d-82b9-7d21eaf12f1f",
+									"children": [],
+									"name": "LIFNR",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "10",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Vendor's account number"
+								},
+								{
+									"id": "d6cb9d65-de0b-41be-b6b8-6d4adde34d3a",
+									"children": [],
+									"name": "NAME1",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "35",
+									"minLength": "",
+									"description": "Name 1"
+								},
+								{
+									"id": "23afcf8b-8363-41d0-95d2-2a72e478ae39",
+									"children": [],
+									"name": "SUPPLIER_NAME",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "35",
+									"minLength": "",
+									"description": "Name 1"
+								},
+								{
+									"id": "56bb13df-a1f7-444b-96dd-b82cce1b7861",
+									"children": [],
+									"name": "VGBEL",
+									"objectType": "string",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "10",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Document number of the reference document"
+								},
+								{
+									"id": "b4168fd9-2e62-4748-b872-2b733340cd23",
+									"children": [],
+									"name": "DLV_STATUS",
+									"objectType": "integer",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": ""
+								},
+								{
+									"id": "096354ae-b0b4-457c-bba5-1cc35986377b",
+									"children": [],
+									"name": "DLV_TYPE",
+									"objectType": "integer",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": ""
+								},
+								{
+									"id": "59e506b3-c2c8-40be-87d7-c2ff1cf68071",
+									"children": [],
+									"name": "CYL_TYPE",
+									"objectType": "integer",
+									"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": ""
+								}
+							],
+							"required": false,
+							"maxLength": "",
+							"minLength": ""
+						}
+					],
+					"required": false,
+					"parent": "fc671c69-97eb-4828-a06d-9e92603e6a02",
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"name": "",
+					"objectType": "object",
+					"parent": "cf239e6d-3f04-4d67-8a50-b73bbf5fc087",
+					"isParent": true,
+					"children": [
+						{
+							"id": "8919db24-f141-4791-877c-dac4ee6514f5",
+							"children": [],
+							"name": "VBELN",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "10",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Delivery"
+						},
+						{
+							"id": "693384d2-9e57-4d79-8ec1-0ea2f730ac3f",
+							"children": [],
+							"name": "LFDAT",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"example": "20160831",
+							"maxLength": "10",
+							"minLength": "8",
+							"pattern": "^(\\d{4})\\-?(0[1-9]|1[0-2])\\-?(0[1-9]|[12]\\d|3[01])|0{8}$",
+							"description": "Delivery Date"
+						},
+						{
+							"id": "afdf19fb-e05f-4eef-8053-9e8577a86b2c",
+							"children": [],
+							"name": "ERNAM",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "12",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Name of Person Responsible for Creating the Object"
+						},
+						{
+							"id": "8f998a17-f3c3-4c12-9bea-9ade498e349f",
+							"children": [],
+							"name": "VSTEL",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "4",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Shipping Point / Receiving Point"
+						},
+						{
+							"id": "847ecacb-a117-4a5d-8a6b-affec5309429",
+							"children": [],
+							"name": "VKORG",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "4",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Sales Organization"
+						},
+						{
+							"id": "6bbb67b3-72c4-4660-bebc-c2e25c508693",
+							"children": [],
+							"name": "LFART",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "4",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Delivery Type"
+						},
+						{
+							"id": "1e2c11b1-784d-4589-a58e-f2578be7b91e",
+							"children": [],
+							"name": "KUNNR",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "10",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Ship-to Party"
+						},
+						{
+							"id": "8e7063e2-48f7-4cd7-8723-ccb34f66598b",
+							"children": [],
+							"name": "KUNAG",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "10",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Sold-to Party"
+						},
+						{
+							"id": "6c1701cb-f33c-478d-82b9-7d21eaf12f1f",
+							"children": [],
+							"name": "LIFNR",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "10",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Vendor's account number"
+						},
+						{
+							"id": "d6cb9d65-de0b-41be-b6b8-6d4adde34d3a",
+							"children": [],
+							"name": "NAME1",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "35",
+							"minLength": "",
+							"description": "Name 1"
+						},
+						{
+							"id": "23afcf8b-8363-41d0-95d2-2a72e478ae39",
+							"children": [],
+							"name": "SUPPLIER_NAME",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "35",
+							"minLength": "",
+							"description": "Name 1"
+						},
+						{
+							"id": "56bb13df-a1f7-444b-96dd-b82cce1b7861",
+							"children": [],
+							"name": "VGBEL",
+							"objectType": "string",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "10",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Document number of the reference document"
+						},
+						{
+							"id": "b4168fd9-2e62-4748-b872-2b733340cd23",
+							"children": [],
+							"name": "DLV_STATUS",
+							"objectType": "integer",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "",
+							"minLength": ""
+						},
+						{
+							"id": "096354ae-b0b4-457c-bba5-1cc35986377b",
+							"children": [],
+							"name": "DLV_TYPE",
+							"objectType": "integer",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "",
+							"minLength": ""
+						},
+						{
+							"id": "59e506b3-c2c8-40be-87d7-c2ff1cf68071",
+							"children": [],
+							"name": "CYL_TYPE",
+							"objectType": "integer",
+							"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+							"isParent": false,
+							"required": false,
+							"maxLength": "",
+							"minLength": ""
+						}
+					],
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "8919db24-f141-4791-877c-dac4ee6514f5",
+					"children": [],
+					"name": "VBELN",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "10",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Delivery"
+				},
+				{
+					"id": "693384d2-9e57-4d79-8ec1-0ea2f730ac3f",
+					"children": [],
+					"name": "LFDAT",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"example": "20160831",
+					"maxLength": "10",
+					"minLength": "8",
+					"pattern": "^(\\d{4})\\-?(0[1-9]|1[0-2])\\-?(0[1-9]|[12]\\d|3[01])|0{8}$",
+					"description": "Delivery Date"
+				},
+				{
+					"id": "afdf19fb-e05f-4eef-8053-9e8577a86b2c",
+					"children": [],
+					"name": "ERNAM",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "12",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Name of Person Responsible for Creating the Object"
+				},
+				{
+					"id": "8f998a17-f3c3-4c12-9bea-9ade498e349f",
+					"children": [],
+					"name": "VSTEL",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "4",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Shipping Point / Receiving Point"
+				},
+				{
+					"id": "847ecacb-a117-4a5d-8a6b-affec5309429",
+					"children": [],
+					"name": "VKORG",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "4",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Sales Organization"
+				},
+				{
+					"id": "6bbb67b3-72c4-4660-bebc-c2e25c508693",
+					"children": [],
+					"name": "LFART",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "4",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Delivery Type"
+				},
+				{
+					"id": "1e2c11b1-784d-4589-a58e-f2578be7b91e",
+					"children": [],
+					"name": "KUNNR",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "10",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Ship-to Party"
+				},
+				{
+					"id": "8e7063e2-48f7-4cd7-8723-ccb34f66598b",
+					"children": [],
+					"name": "KUNAG",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "10",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Sold-to Party"
+				},
+				{
+					"id": "6c1701cb-f33c-478d-82b9-7d21eaf12f1f",
+					"children": [],
+					"name": "LIFNR",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "10",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Vendor's account number"
+				},
+				{
+					"id": "d6cb9d65-de0b-41be-b6b8-6d4adde34d3a",
+					"children": [],
+					"name": "NAME1",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "35",
+					"minLength": "",
+					"description": "Name 1"
+				},
+				{
+					"id": "23afcf8b-8363-41d0-95d2-2a72e478ae39",
+					"children": [],
+					"name": "SUPPLIER_NAME",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "35",
+					"minLength": "",
+					"description": "Name 1"
+				},
+				{
+					"id": "56bb13df-a1f7-444b-96dd-b82cce1b7861",
+					"children": [],
+					"name": "VGBEL",
+					"objectType": "string",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "10",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Document number of the reference document"
+				},
+				{
+					"id": "b4168fd9-2e62-4748-b872-2b733340cd23",
+					"children": [],
+					"name": "DLV_STATUS",
+					"objectType": "integer",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "096354ae-b0b4-457c-bba5-1cc35986377b",
+					"children": [],
+					"name": "DLV_TYPE",
+					"objectType": "integer",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "59e506b3-c2c8-40be-87d7-c2ff1cf68071",
+					"children": [],
+					"name": "CYL_TYPE",
+					"objectType": "integer",
+					"parent": "336820ee-65e4-4c88-9edf-abe4a9699f1c",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "53c599a9-fb09-4efe-aa3b-d9bc5c2782fa",
+					"name": "MT_ITEMS",
+					"isParent": true,
+					"objectType": "array",
+					"children": [
+						{
+							"id": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"name": "",
+							"objectType": "object",
+							"parent": "53c599a9-fb09-4efe-aa3b-d9bc5c2782fa",
+							"isParent": true,
+							"children": [
+								{
+									"id": "dd513c7e-07cf-47e4-a6e9-c2f957556e0f",
+									"children": [],
+									"name": "VBELN",
+									"objectType": "string",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "10",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Delivery"
+								},
+								{
+									"id": "5fa92faf-5336-4e2b-9b0c-46bc7edec27b",
+									"children": [],
+									"name": "POSNR",
+									"objectType": "number",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": "",
+									"description": "Delivery Item"
+								},
+								{
+									"id": "caa6c141-04de-4974-a7c4-af0a426d1a29",
+									"children": [],
+									"name": "MATNR",
+									"objectType": "string",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "40",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Material Number"
+								},
+								{
+									"id": "0faada52-34d2-41d7-971e-5846266b21f4",
+									"children": [],
+									"name": "WERKS",
+									"objectType": "string",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "4",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Plant"
+								},
+								{
+									"id": "5f443140-14df-42e7-a8ab-2205f964d76f",
+									"children": [],
+									"name": "LGORT",
+									"objectType": "string",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "4",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Storage location"
+								},
+								{
+									"id": "a894b4d8-83c8-4c04-9e90-b2dfb4929b0a",
+									"children": [],
+									"name": "ARKTX",
+									"objectType": "string",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "40",
+									"minLength": "",
+									"description": "Short text for sales order item"
+								},
+								{
+									"id": "3219473b-17ff-42e5-8e03-003562be039d",
+									"children": [],
+									"name": "LFIMG",
+									"objectType": "number",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": "",
+									"description": "Actual quantity delivered (in sales units)"
+								},
+								{
+									"id": "f77565b4-2d3a-4418-81d5-144a0fe208ab",
+									"children": [],
+									"name": "MEINS",
+									"objectType": "string",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "3",
+									"minLength": "",
+									"description": "Base Unit of Measure"
+								},
+								{
+									"id": "1f35ebe4-8b11-4a73-982f-2242ff07eb8f",
+									"children": [],
+									"name": "VGBEL",
+									"objectType": "string",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "10",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Document number of the reference document"
+								},
+								{
+									"id": "4f57ecbf-e248-4c8b-81e0-731d3a52acb8",
+									"children": [],
+									"name": "VGPOS",
+									"objectType": "number",
+									"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+									"isParent": false,
+									"required": false,
+									"maxLength": "",
+									"minLength": "",
+									"description": "Item number of the reference item"
+								}
+							],
+							"required": false,
+							"maxLength": "",
+							"minLength": ""
+						}
+					],
+					"required": false,
+					"parent": "fc671c69-97eb-4828-a06d-9e92603e6a02",
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"name": "",
+					"objectType": "object",
+					"parent": "53c599a9-fb09-4efe-aa3b-d9bc5c2782fa",
+					"isParent": true,
+					"children": [
+						{
+							"id": "dd513c7e-07cf-47e4-a6e9-c2f957556e0f",
+							"children": [],
+							"name": "VBELN",
+							"objectType": "string",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "10",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Delivery"
+						},
+						{
+							"id": "5fa92faf-5336-4e2b-9b0c-46bc7edec27b",
+							"children": [],
+							"name": "POSNR",
+							"objectType": "number",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "",
+							"minLength": "",
+							"description": "Delivery Item"
+						},
+						{
+							"id": "caa6c141-04de-4974-a7c4-af0a426d1a29",
+							"children": [],
+							"name": "MATNR",
+							"objectType": "string",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "40",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Material Number"
+						},
+						{
+							"id": "0faada52-34d2-41d7-971e-5846266b21f4",
+							"children": [],
+							"name": "WERKS",
+							"objectType": "string",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "4",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Plant"
+						},
+						{
+							"id": "5f443140-14df-42e7-a8ab-2205f964d76f",
+							"children": [],
+							"name": "LGORT",
+							"objectType": "string",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "4",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Storage location"
+						},
+						{
+							"id": "a894b4d8-83c8-4c04-9e90-b2dfb4929b0a",
+							"children": [],
+							"name": "ARKTX",
+							"objectType": "string",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "40",
+							"minLength": "",
+							"description": "Short text for sales order item"
+						},
+						{
+							"id": "3219473b-17ff-42e5-8e03-003562be039d",
+							"children": [],
+							"name": "LFIMG",
+							"objectType": "number",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "",
+							"minLength": "",
+							"description": "Actual quantity delivered (in sales units)"
+						},
+						{
+							"id": "f77565b4-2d3a-4418-81d5-144a0fe208ab",
+							"children": [],
+							"name": "MEINS",
+							"objectType": "string",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "3",
+							"minLength": "",
+							"description": "Base Unit of Measure"
+						},
+						{
+							"id": "1f35ebe4-8b11-4a73-982f-2242ff07eb8f",
+							"children": [],
+							"name": "VGBEL",
+							"objectType": "string",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "10",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Document number of the reference document"
+						},
+						{
+							"id": "4f57ecbf-e248-4c8b-81e0-731d3a52acb8",
+							"children": [],
+							"name": "VGPOS",
+							"objectType": "number",
+							"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+							"isParent": false,
+							"required": false,
+							"maxLength": "",
+							"minLength": "",
+							"description": "Item number of the reference item"
+						}
+					],
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "dd513c7e-07cf-47e4-a6e9-c2f957556e0f",
+					"children": [],
+					"name": "VBELN",
+					"objectType": "string",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "10",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Delivery"
+				},
+				{
+					"id": "5fa92faf-5336-4e2b-9b0c-46bc7edec27b",
+					"children": [],
+					"name": "POSNR",
+					"objectType": "number",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": "",
+					"description": "Delivery Item"
+				},
+				{
+					"id": "caa6c141-04de-4974-a7c4-af0a426d1a29",
+					"children": [],
+					"name": "MATNR",
+					"objectType": "string",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "40",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Material Number"
+				},
+				{
+					"id": "0faada52-34d2-41d7-971e-5846266b21f4",
+					"children": [],
+					"name": "WERKS",
+					"objectType": "string",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "4",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Plant"
+				},
+				{
+					"id": "5f443140-14df-42e7-a8ab-2205f964d76f",
+					"children": [],
+					"name": "LGORT",
+					"objectType": "string",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "4",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Storage location"
+				},
+				{
+					"id": "a894b4d8-83c8-4c04-9e90-b2dfb4929b0a",
+					"children": [],
+					"name": "ARKTX",
+					"objectType": "string",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "40",
+					"minLength": "",
+					"description": "Short text for sales order item"
+				},
+				{
+					"id": "3219473b-17ff-42e5-8e03-003562be039d",
+					"children": [],
+					"name": "LFIMG",
+					"objectType": "number",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": "",
+					"description": "Actual quantity delivered (in sales units)"
+				},
+				{
+					"id": "f77565b4-2d3a-4418-81d5-144a0fe208ab",
+					"children": [],
+					"name": "MEINS",
+					"objectType": "string",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "3",
+					"minLength": "",
+					"description": "Base Unit of Measure"
+				},
+				{
+					"id": "1f35ebe4-8b11-4a73-982f-2242ff07eb8f",
+					"children": [],
+					"name": "VGBEL",
+					"objectType": "string",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "10",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Document number of the reference document"
+				},
+				{
+					"id": "4f57ecbf-e248-4c8b-81e0-731d3a52acb8",
+					"children": [],
+					"name": "VGPOS",
+					"objectType": "number",
+					"parent": "aad5f467-72b1-48db-8031-c4e5aacc4812",
+					"isParent": false,
+					"required": false,
+					"maxLength": "",
+					"minLength": "",
+					"description": "Item number of the reference item"
+				}
+			]
+		},
+		{
+			"id": "2f9da6df-3946-4c41-adc3-8f63e39f49bb",
+			"name": "postUPDATE_DELIVERY_DATEResponse",
+			"type": "object",
+			"properties": [
+				{
+					"id": "4cb9a63c-de5b-4ceb-bfa8-a74379ec7fa5",
+					"children": [
+						{
+							"id": "e51e8412-a78e-4f48-9cf6-444d8554e042",
+							"name": "MT_MESSAGES",
+							"isParent": true,
+							"objectType": "array",
+							"children": [
+								{
+									"id": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+									"name": "",
+									"objectType": "object",
+									"parent": "e51e8412-a78e-4f48-9cf6-444d8554e042",
+									"isParent": true,
+									"children": [
+										{
+											"id": "f42e1156-0285-456b-b616-47f9351b831a",
+											"children": [],
+											"name": "TYPE",
+											"objectType": "string",
+											"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+											"isParent": false,
+											"required": false,
+											"maxLength": "1",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Message type: S Success, E Error, W Warning, I Info, A Abort"
+										},
+										{
+											"id": "233ed89d-e19d-4e21-8b14-401935b004d3",
+											"children": [],
+											"name": "MESSAGE",
+											"objectType": "string",
+											"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+											"isParent": false,
+											"required": false,
+											"maxLength": "220",
+											"minLength": "",
+											"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+											"description": "Message Text"
+										}
+									],
+									"required": false,
+									"maxLength": "",
+									"minLength": ""
+								}
+							],
+							"required": false,
+							"parent": "4cb9a63c-de5b-4ceb-bfa8-a74379ec7fa5",
+							"maxLength": "",
+							"minLength": ""
+						}
+					],
+					"name": "result",
+					"objectType": "object",
+					"parent": "",
+					"isParent": true,
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "e51e8412-a78e-4f48-9cf6-444d8554e042",
+					"name": "MT_MESSAGES",
+					"isParent": true,
+					"objectType": "array",
+					"children": [
+						{
+							"id": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+							"name": "",
+							"objectType": "object",
+							"parent": "e51e8412-a78e-4f48-9cf6-444d8554e042",
+							"isParent": true,
+							"children": [
+								{
+									"id": "f42e1156-0285-456b-b616-47f9351b831a",
+									"children": [],
+									"name": "TYPE",
+									"objectType": "string",
+									"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+									"isParent": false,
+									"required": false,
+									"maxLength": "1",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Message type: S Success, E Error, W Warning, I Info, A Abort"
+								},
+								{
+									"id": "233ed89d-e19d-4e21-8b14-401935b004d3",
+									"children": [],
+									"name": "MESSAGE",
+									"objectType": "string",
+									"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+									"isParent": false,
+									"required": false,
+									"maxLength": "220",
+									"minLength": "",
+									"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+									"description": "Message Text"
+								}
+							],
+							"required": false,
+							"maxLength": "",
+							"minLength": ""
+						}
+					],
+					"required": false,
+					"parent": "4cb9a63c-de5b-4ceb-bfa8-a74379ec7fa5",
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+					"name": "",
+					"objectType": "object",
+					"parent": "e51e8412-a78e-4f48-9cf6-444d8554e042",
+					"isParent": true,
+					"children": [
+						{
+							"id": "f42e1156-0285-456b-b616-47f9351b831a",
+							"children": [],
+							"name": "TYPE",
+							"objectType": "string",
+							"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+							"isParent": false,
+							"required": false,
+							"maxLength": "1",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Message type: S Success, E Error, W Warning, I Info, A Abort"
+						},
+						{
+							"id": "233ed89d-e19d-4e21-8b14-401935b004d3",
+							"children": [],
+							"name": "MESSAGE",
+							"objectType": "string",
+							"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+							"isParent": false,
+							"required": false,
+							"maxLength": "220",
+							"minLength": "",
+							"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+							"description": "Message Text"
+						}
+					],
+					"required": false,
+					"maxLength": "",
+					"minLength": ""
+				},
+				{
+					"id": "f42e1156-0285-456b-b616-47f9351b831a",
+					"children": [],
+					"name": "TYPE",
+					"objectType": "string",
+					"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+					"isParent": false,
+					"required": false,
+					"maxLength": "1",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Message type: S Success, E Error, W Warning, I Info, A Abort"
+				},
+				{
+					"id": "233ed89d-e19d-4e21-8b14-401935b004d3",
+					"children": [],
+					"name": "MESSAGE",
+					"objectType": "string",
+					"parent": "0923c8f5-20ac-441f-948f-96292e7c5d1b",
+					"isParent": false,
+					"required": false,
+					"maxLength": "220",
+					"minLength": "",
+					"pattern": "^[^a-zéèåæãâäõöôûüøç]*$",
+					"description": "Message Text"
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "API_URENCO_DELIVERIES",
+	"endpoint": "https://s4ides.neptune-software.com/neptune/api/api_urenco_deliveries",
+	"ver": "23.6.2.204",
+	"version": "1.0",
+	"description": "Urenco POV - Deliveries API",
+	"mediaType": null,
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "",
+	"about": null,
+	"enableProxy": true,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": true,
+	"useOwnProcess": false,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"apiGroup": null,
+	"apiFormat": 1,
+	"roles": []
+}

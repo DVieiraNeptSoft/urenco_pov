@@ -1,0 +1,59 @@
+{
+	"id": "a44830af-9c0e-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-19T12:27:44.653Z",
+	"createdBy": "masoom",
+	"fields": [
+		{
+			"id": "5284a498-6fcf-4be9-8f81-dad6bcef0b24",
+			"fieldName": "IssueId",
+			"fieldType": "bigint",
+			"isUnique": false,
+			"description": "Issue Id"
+		},
+		{
+			"id": "8d25a159-8430-4a0c-d19f-ef08898cf45a",
+			"fieldName": "Facility",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Facility"
+		},
+		{
+			"id": "b9561457-fe46-403d-e670-032c6924a1ea",
+			"fieldName": "Facility_Desc",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Facility Description"
+		},
+		{
+			"id": "571b0596-78be-4954-9ee6-afbc476c5226",
+			"fieldName": "SubArea",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "SubArea"
+		},
+		{
+			"id": "dd574201-c175-448f-deef-6f3b74436628",
+			"fieldName": "SubArea_Desc",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "SubArea Description"
+		},
+		{
+			"id": "3fec25ee-0c00-40c5-f6bd-089d39b1a1da",
+			"fieldName": "Flag",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Flag"
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_issue_facility_subarea",
+	"description": null,
+	"ver": "24.3.21.1612",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

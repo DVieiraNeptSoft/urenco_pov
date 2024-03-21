@@ -1,0 +1,11 @@
+.greenBox .sapMInputBase {
+  background: green !important;
+}
+
+.redBox .sapMInputBase {
+  background: red !important;
+}
+
+.yellowBox .sapMInputBase {
+  background: yellow !important;
+}

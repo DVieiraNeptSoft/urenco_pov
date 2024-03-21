@@ -1,0 +1,12 @@
+appSetBusy(true);
+
+var options = {
+    parameters: {
+        "$select": "", // Optional 
+        "sap-client": "100", // Required 
+        "MV_DATE_FROM": "20211001", // Required 
+        "MV_DATE_TO": "20231231" // Required 
+    }
+};
+
+apiRestAPIUrencoDeliveries(options);

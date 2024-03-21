@@ -1,0 +1,30 @@
+if (typeof status === "undefined" || status === null || status === "") {
+    return;
+}
+var formattedText = status;
+
+switch (status) {
+    case 1:
+        formattedText = "Initial";
+        break;
+    case 2:
+        formattedText = "Initial Approval";
+        break;
+    case 3:
+        formattedText = "Dispensing";
+        break;
+    case 4:
+        formattedText = "Label Checks Approval";
+        break;
+    case 5:
+        formattedText = "Final Steps";
+        break;
+    case 6:
+        formattedText = "Final Approval";
+        break;
+    case 7:
+        formattedText = "Completed";
+        break;
+}
+
+return formattedText;

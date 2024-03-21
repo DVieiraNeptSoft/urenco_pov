@@ -1,0 +1,231 @@
+{
+	"id": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"createdAt": "2023-05-22T14:18:10.030Z",
+	"createdBy": "daniel.vieira@neptune-software.com",
+	"git": {
+		"remote": "https://github.com/DVieiraNeptSoft/urenco_pov"
+	},
+	"name": "urenco_pov",
+	"description": null,
+	"ver": "24.3.21.1510",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "d78fda68-abf8-ed11-907c-000d3a654fb6",
+			"application": "urenco_deliveries_pov",
+			"title": "",
+			"description": "",
+			"package": {
+				"id": "AA791C7A-ABF8-ED11-907C-000D3A654FB6"
+			}
+		},
+		{
+			"id": "681a01af-a10a-ee11-907c-000d3ab76cc2",
+			"application": "urenco_issuelog_poc",
+			"title": "",
+			"description": "",
+			"package": {
+				"id": "AA791C7A-ABF8-ED11-907C-000D3A654FB6"
+			}
+		},
+		{
+			"id": "3d46a714-5bfa-ed11-907c-000d3a654fb6",
+			"application": "urenco_uqforms",
+			"title": "",
+			"description": "",
+			"package": {
+				"id": "AA791C7A-ABF8-ED11-907C-000D3A654FB6"
+			}
+		}
+	],
+	"api": [
+		{
+			"id": "efa78552-160e-ee11-907c-000d3ab76cc2",
+			"name": "APIUrencoActionOnIssues",
+			"description": null,
+			"apiGroup": null
+		},
+		{
+			"id": "e618642a-9a0a-ee11-907c-000d3ab76cc2",
+			"name": "APIUrencoFacilitySubarea",
+			"description": "Operations on Facility and Subarea",
+			"apiGroup": null
+		},
+		{
+			"id": "ca2fea74-4e10-ee11-907c-000d3ab76cc2",
+			"name": "APIUrencoIssues",
+			"description": null,
+			"apiGroup": null
+		},
+		{
+			"id": "a00acdb7-3ffb-ed11-907c-000d3a654fb6",
+			"name": "API urenco_uqform",
+			"description": null,
+			"apiGroup": null
+		},
+		{
+			"id": "6abef1ce-3ffb-ed11-907c-000d3a654fb6",
+			"name": "API urenco_p10",
+			"description": null,
+			"apiGroup": null
+		},
+		{
+			"id": "5eff82cc-820b-ee11-907c-000d3ab76cc2",
+			"name": "API urenco_probability",
+			"description": "Urenco Probability get Operations",
+			"apiGroup": null
+		},
+		{
+			"id": "5e64cae1-d5f8-ed11-907c-000d3a654fb6",
+			"name": "API_URENCO_DELIVERIES",
+			"description": "Urenco POV - Deliveries API",
+			"apiGroup": null
+		},
+		{
+			"id": "56db6264-510f-ee11-907c-000d3ab76cc2",
+			"name": "APIFacilitySubAreaOnIssue",
+			"description": "Operations on Facility and SubArea on Issue",
+			"apiGroup": null
+		},
+		{
+			"id": "5593a5a7-be0a-ee11-907c-000d3ab76cc2",
+			"name": "API_URENCO_NOTIFICATIONS",
+			"description": "Urenco POC Notifications",
+			"apiGroup": null
+		},
+		{
+			"id": "0969d758-7c0b-ee11-907c-000d3ab76cc2",
+			"name": "APIUrencoConsequence",
+			"description": "Consequence Master data operation",
+			"apiGroup": null
+		}
+	],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [
+		{
+			"id": "edc11bfd-44fa-ed11-907c-000d3a654fb6",
+			"name": "urenco_deliveries_userinput",
+			"description": null
+		},
+		{
+			"id": "e70e95e7-a9f9-ed11-907c-000d3a654fb6",
+			"name": "urenco_p10",
+			"description": "P10 entries"
+		},
+		{
+			"id": "ddfa2226-7b0b-ee11-907c-000d3ab76cc2",
+			"name": "urenco_consequence",
+			"description": "Consequence Master Data Table"
+		},
+		{
+			"id": "c0ec1bb9-a9f9-ed11-907c-000d3a654fb6",
+			"name": "urenco_uqform",
+			"description": "UQ Forms"
+		},
+		{
+			"id": "bada5f22-340c-ee11-907c-000d3ab76cc2",
+			"name": "urenco_issue_actions",
+			"description": "Actions for Issues and Assignment Table"
+		},
+		{
+			"id": "b5af92d2-020a-ee11-907c-000d3ab76cc2",
+			"name": "urenco_facility_subarea",
+			"description": "Master List for Facility and Subarea Selection Field"
+		},
+		{
+			"id": "a44830af-9c0e-ee11-907c-000d3ab76cc2",
+			"name": "urenco_issue_facility_subarea",
+			"description": null
+		},
+		{
+			"id": "4b868ef9-810b-ee11-907c-000d3ab76cc2",
+			"name": "urenco_probability",
+			"description": "Probability Master Data "
+		},
+		{
+			"id": "2b3ca98b-fc09-ee11-907c-000d3ab76cc2",
+			"name": "urenco_issue",
+			"description": "Issue Logs for Urenco"
+		}
+	],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [
+		{
+			"id": "9eb6d784-610f-ee11-907c-000d3ab76cc2",
+			"description": null,
+			"name": "UrencoPOC"
+		},
+		{
+			"id": "84a708b9-5e10-ee11-907c-000d3ab76cc2",
+			"description": null,
+			"name": "UrencoIssuesNew"
+		},
+		{
+			"id": "36550fd5-56fa-ed11-907c-000d3a654fb6",
+			"description": null,
+			"name": "UrencoDeliveriesSchedule"
+		},
+		{
+			"id": "1ba4c8ec-57fa-ed11-907c-000d3a654fb6",
+			"description": null,
+			"name": "UrencoUQForms"
+		}
+	],
+	"category": [
+		{
+			"id": "560c5bdb-56fa-ed11-907c-000d3a654fb6",
+			"description": null,
+			"name": "Urenco Logistics"
+		},
+		{
+			"id": "1edfe79a-610f-ee11-907c-000d3ab76cc2",
+			"description": null,
+			"name": "UrencoPOC"
+		}
+	],
+	"launchpad": [
+		{
+			"id": "d1be55e3-610f-ee11-907c-000d3ab76cc2",
+			"name": "UrencoPOC",
+			"description": "Urenco System Issue Logs"
+		}
+	],
+	"certificates": [],
+	"role": [
+		{
+			"id": "83cd2cea-fafb-ed11-907c-000d3a654fb6",
+			"name": "URENCO_LAB_EMPLOYEE",
+			"description": "Lab Employee"
+		},
+		{
+			"id": "7f1390f3-fafb-ed11-907c-000d3a654fb6",
+			"name": "URENCO_SUPERVISOR",
+			"description": "Urenco Supervisor"
+		}
+	],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [
+		{
+			"id": "a56f7237-fefb-ed11-907c-000d3a654fb6",
+			"name": "URENCO_UQFORM",
+			"description": "UQ Form requires your attention"
+		}
+	],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}

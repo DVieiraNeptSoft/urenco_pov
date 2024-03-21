@@ -1,0 +1,2 @@
+var value = this.getValue();
+this.setValue(value.toUpperCase());

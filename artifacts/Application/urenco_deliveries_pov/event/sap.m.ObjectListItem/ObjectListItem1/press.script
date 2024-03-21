@@ -1,0 +1,40 @@
+// Replace yourField with FieldName
+const context = oEvent.oSource.getBindingContext();
+
+// Get Entire Model
+const data = context.getObject();
+
+openPopupInList = true;
+
+if (data.deliverynr !== null) {
+    var modelHeaderData = modelMultiModelUrencoDeliveries.oData.result.MT_HEADERS;
+    var modelDetailData = modelMultiModelUrencoDeliveries.oData.result.MT_ITEMS;
+
+    // Using single key field
+    var filteredHeaderData = ModelData.FindFirst(modelHeaderData, "VBELN", data.deliverynr, "EQ");
+    var filteredDetailData = ModelData.Find(modelDetailData, "VBELN", data.deliverynr, "EQ");
+
+    // modelPopoverDeliveryDetails.setData(filteredHeaderData); //Popup data (OLD)
+    modelDialogListDeliveryDetails.setData(filteredHeaderData); //Dialog data (NEW)
+
+    // modelGridListDeliveryItems.setData(filteredDetailData); //Popup List data (OLD)
+    modelGridListDeliveryDetailsItems.setData(filteredDetailData); //Dialog data (NEW)
+
+    //Call Open Edition API to get this Delivery User Input Data
+    var options = {
+        parameters: {
+            where: JSON.stringify({ vbeln: data.deliverynr }), // Optional
+        },
+    };
+
+    apiRestAPIUrencoDeliveriesInputGet(options);
+
+    // PopoverDeliveryDetails.openBy(oEvent.oSource);
+    // PopoverDeliveryDetails.openBy(ListViewDeliveries);
+    DialogListDeliveryDetails.open(); //Will now Open a Dialog instead of a Popup
+} else {
+    var modelHeaderData = modelMultiModelUrencoDeliveriesUserInputAllData.oData;
+    var filteredHeaderData = ModelData.FindFirst(modelHeaderData, "id", data.id, "EQ");
+
+    setDataToListPopup(filteredHeaderData, oEvent.oSource);
+}

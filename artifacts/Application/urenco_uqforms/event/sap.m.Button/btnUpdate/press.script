@@ -1,0 +1,16 @@
+var optionsAPI;
+
+optionsAPI = {
+        parameters: {
+            sort: "createdAt", // Optional
+        },
+}
+
+if (parseInt(oComboBox.getSelectedKey()) !== 0) {
+    Object.assign(optionsAPI.parameters, { where: JSON.stringify({ status: parseInt(oComboBox.getSelectedKey()) }) })
+}
+
+apiapiGetUQForms(optionsAPI);
+App.setBusy(true);
+
+

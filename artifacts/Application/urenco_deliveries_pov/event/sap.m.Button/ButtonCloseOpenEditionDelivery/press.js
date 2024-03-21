@@ -1,0 +1,2 @@
+// PopoverOpenEditionDelivery.close();
+DialogEditDeliveryConfirmation.open();

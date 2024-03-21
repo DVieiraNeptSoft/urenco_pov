@@ -1,0 +1,390 @@
+{
+	"id": "c0ec1bb9-a9f9-ed11-907c-000d3a654fb6",
+	"createdAt": "2023-05-23T20:38:10.570Z",
+	"createdBy": "gabriel.andrade@neptune-software.com",
+	"fields": [
+		{
+			"id": "e06ea6de-7906-475c-9955-a73c3e51e13e",
+			"fieldName": "cylinder",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "084c1db6-9f27-4a04-c33e-0eee35f1b7ff",
+			"fieldName": "limsId",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "120bc92c-097e-4efe-fa4b-e62c6f5832be",
+			"fieldName": "dispenseDate",
+			"fieldType": "timestamptz",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "ea043f71-0521-4fde-bf4f-3e55ac7fa264",
+			"fieldName": "hotBox",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "b3c56047-a06b-4134-bd6b-5c830fa14138",
+			"fieldName": "pigeonHole",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "ceaf1e12-2161-4057-ba5e-1f31fd6c8050",
+			"fieldName": "checkPaperworkInitial",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "6f35f012-dc04-4bc0-8060-01c90caf3800",
+			"fieldName": "checkBottles",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "8adcb810-472e-4b26-c14d-9f21aa147d84",
+			"fieldName": "checkLIMS",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "b210c4e8-5e25-4294-e880-b348afa61154",
+			"fieldName": "checkDesignationLinks",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "140442aa-6c3a-4076-9b68-3b68c8a0dca3",
+			"fieldName": "bsiNumberP10",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "2",
+			"isNullable": true,
+			"precision": "10"
+		},
+		{
+			"id": "3f1880df-f0ef-4b66-910f-befdaf461ff4",
+			"fieldName": "weightHexTotal",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "2",
+			"isNullable": true,
+			"precision": "10"
+		},
+		{
+			"id": "ef6196af-d7cb-4b7d-8371-d1d40986f917",
+			"fieldName": "bsiWeightP10_Hex",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "2",
+			"isNullable": true,
+			"precision": "10"
+		},
+		{
+			"id": "262cf56a-d739-42e7-b393-1cf014287464",
+			"fieldName": "bsiWeightP10Empty",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "2",
+			"isNullable": true,
+			"precision": "10"
+		},
+		{
+			"id": "e9c84aaf-2076-4c3f-8e33-98ffc62a80cc",
+			"fieldName": "bsiWeightHex",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "2",
+			"isNullable": true,
+			"precision": "10"
+		},
+		{
+			"id": "97ce3e97-888e-4a31-9d27-c60957b21b67",
+			"fieldName": "bsiWeightWater",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "2",
+			"isNullable": true,
+			"precision": "10"
+		},
+		{
+			"id": "08b42c3a-0032-485e-ce3d-6c7e0ca389f1",
+			"fieldName": "assayWeightP10_Hex",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "68b4484a-9a1e-4854-b30b-906f27ae0db3",
+			"fieldName": "assayWeightP10Empty",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "370e45bc-f4e5-47c1-cce8-484e46410ee0",
+			"fieldName": "assayWeightHex",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "0fb36a69-d473-4617-cb13-d41ce0fb36e1",
+			"fieldName": "assayWeightEmptyBottle",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "ac809bac-dbe6-41f5-ced1-59942066c97c",
+			"fieldName": "assayWeightWater",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "4abbf82c-7e84-4868-f1f0-fd1a77d52805",
+			"fieldName": "assayWeightHydrolysedWater",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "89709ab4-1f77-4033-8e0c-371a92d8e8a8",
+			"fieldName": "assayWeightP10_Bottle",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "02b373b0-d0ed-40b3-ecf5-977955028d94",
+			"fieldName": "assayWeightAssaySolution",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "4",
+			"isNullable": true,
+			"precision": "12"
+		},
+		{
+			"id": "4f047e97-8f67-4e83-eb0a-fa6245c723f3",
+			"fieldName": "checkLabel",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "36a85d2f-913e-4319-abc3-02cc41eb796f",
+			"fieldName": "refBottleWeight",
+			"fieldType": "decimal",
+			"isUnique": false,
+			"scale": "2",
+			"isNullable": true,
+			"precision": "10"
+		},
+		{
+			"id": "015e0f34-94ba-40b4-b413-f2c93280b55e",
+			"fieldName": "refBottleDisposal",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "45dfa1df-8b72-4877-df2d-ab0b16d7d44e",
+			"fieldName": "refBottleDisposalOrder",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "88d568c2-6fde-4a40-e8ae-93b520393281",
+			"fieldName": "outBottleDisposalOrder",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "9ff89c2c-9eb5-42c8-d4e8-f0cc0c68c6ae",
+			"fieldName": "customerP10Location",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "eb297915-e12e-4020-9930-54a398b668a8",
+			"fieldName": "checkExcelSampleDetails",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "29523c96-a884-4bfe-c4e2-f5117bf2e4ea",
+			"fieldName": "checkExcelTrapDetails",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "90889a36-8267-48b5-d298-1f92f9221ba6",
+			"fieldName": "checkCriticalitySheet",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "c8d4e10f-aaa2-4d28-bb18-48efca2212a4",
+			"fieldName": "checkSAPInformation",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "2c872aea-f57f-4ef1-d844-2fa2e4b20c2a",
+			"fieldName": "checkPhysicalBottleLocation",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "9adb408a-78b7-4a81-f6a6-4a838f9d13de",
+			"fieldName": "checkLIMSCheck",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "f509109d-fbb1-462e-b9ca-2adfe825d98a",
+			"fieldName": "checkPaperwork",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "a78f5c3c-777f-44ac-a6bb-73428e5ef36c",
+			"fieldName": "dispensedBy",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "19090dc2-3d4e-4bf5-fa6b-dc6c640f5daf",
+			"fieldName": "approvalDate",
+			"fieldType": "timestamptz",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "66bb6d37-8fe4-4012-dc19-9fccf6d15cee",
+			"fieldName": "approvedBy",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "0aca20d2-5605-4a67-bae0-bd9d89d88827",
+			"fieldName": "status",
+			"fieldType": "smallint",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "ee9655ad-d4c2-4fcc-8b37-10bcdf7b2552",
+			"fieldName": "plqNumber",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "ea9acfc3-99cf-4d80-d6d3-f8598e5482aa",
+			"fieldName": "refBottle",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "4c66c91d-3980-46f2-ccb3-f3cd52e9fd41",
+			"fieldName": "arbBottle",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "1c4fcffe-3212-4f4e-e17a-e41e72508930",
+			"fieldName": "outBottle",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "9bc2d624-826a-4fb6-86c0-527db239a9e1",
+			"fieldName": "enrichment",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "dcaa0a22-8ecb-4537-85fb-b152c21866cb",
+			"fieldName": "processOrder",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "c8375a91-680e-405e-86f7-eb2c6fd64360",
+			"fieldName": "salesOrder",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "b4c46a0b-bbb6-46d2-af55-b625e5cc3a78",
+			"fieldName": "reportingDate",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "65003d88-a682-4357-d69d-965712d4b38f",
+			"fieldName": "processOrderP10",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_uqform",
+	"description": "UQ Forms",
+	"ver": "24.3.21.1612",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

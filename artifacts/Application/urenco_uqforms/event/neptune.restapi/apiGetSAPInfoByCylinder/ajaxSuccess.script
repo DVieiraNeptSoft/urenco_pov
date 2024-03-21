@@ -1,0 +1,19 @@
+if (xhr.responseJSON.result.MT_INFO[0] !== null && xhr.responseJSON.result.MT_INFO[0]) {
+
+    txtPLQ.setValue(xhr.responseJSON.result.MT_INFO[0].PLQ);
+    txtEnrichment.setValue(xhr.responseJSON.result.MT_INFO[0].ENRICHMENT_PERC);
+    txtEnrichment.setValue(xhr.responseJSON.result.MT_INFO[0].ENRICHMENT_PERC);
+    txtRefBottle.setValue(xhr.responseJSON.result.MT_INFO[0].REF_BOTTLE_NUM);
+    txtArbBottle.setValue(xhr.responseJSON.result.MT_INFO[0].ARB_BOTTLE_NUM);
+    txtProcessOrder.setValue(xhr.responseJSON.result.MT_INFO[0].PROCESS_ORDER);
+    txtSalesOrder.setValue(xhr.responseJSON.result.MT_INFO[0].SALES_ORDER);
+    txtReportingDate.setValue(xhr.responseJSON.result.MT_INFO[0].REPORTING_DATE);
+    txtoutBottle.setValue(xhr.responseJSON.result.MT_INFO[0].OUT_BOTTLE_NUM);
+    txtoutBottleDisposalOrder.setValue(xhr.responseJSON.result.MT_INFO[0].OUT_BOTTLE_DISPOSAL);
+    txtprocessOrderP10.setValue(xhr.responseJSON.result.MT_INFO[0].PROCESS_ORDER_P10);
+    txtRefBottle.setValue(xhr.responseJSON.result.MT_INFO[0].REF_BOTTLE_NUM);
+    txtrefBottleDisposalOrder.setValue(xhr.responseJSON.result.MT_INFO[0].REF_BOTTLE_DISPOSAL);
+
+    sap.m.MessageToast.show("Data fetch from SAP successfull");
+    App.setBusy(false);
+}

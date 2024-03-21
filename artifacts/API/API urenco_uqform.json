@@ -1,0 +1,1048 @@
+{
+	"id": "a00acdb7-3ffb-ed11-907c-000d3a654fb6",
+	"createdAt": "2023-05-25T21:04:21.380Z",
+	"createdBy": "gabriel.andrade@neptune-software.com",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "789e3ddc-4833-4741-ec6c-034c1f5d659d",
+			"path": "/urenco_uqform",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				},
+				{
+					"name": "select",
+					"description": "fieldName1,fieldName2,fieldName3"
+				},
+				{
+					"name": "take",
+					"description": "Limit (paginated) - max number of entities that should be taken"
+				},
+				{
+					"name": "skip",
+					"description": "Offset (paginated) from where entities should be taken"
+				},
+				{
+					"name": "order",
+					"description": "{\"fieldName1\": \"ASC\", \"fieldName2\": \"DESC\"}"
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_uqform"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "da81a3cd-1b67-4ba1-8737-cbbc20dd67f7",
+			"path": "/urenco_uqform",
+			"method": "PUT",
+			"headers": [],
+			"parameters": [],
+			"content": [
+				{
+					"objectType": "array",
+					"name": "urenco_uqform"
+				}
+			],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_uqform"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5c39d8b6-6e44-43d6-edf0-af45063f478c",
+			"path": "/urenco_uqform",
+			"method": "POST",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"example": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [
+				{
+					"objectType": "array",
+					"name": "urenco_uqform"
+				}
+			],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_uqform"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "467ccbd8-51bb-4c05-f9f7-4661535c28e5",
+			"path": "/urenco_uqform",
+			"method": "DELETE",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"example": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_uqform"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "a3997f16-0d87-4811-f63e-c6a55038bc47",
+			"path": "/urenco_uqform/count",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "count"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "3af1a442-40de-4e90-c5e7-d059ffd510cb",
+			"method": "GET",
+			"path": "/urenco_uqform_single",
+			"description": "",
+			"parameters": [
+				{
+					"name": "where",
+					"description": "",
+					"required": false,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				},
+				{
+					"name": "select",
+					"description": "",
+					"required": false,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				}
+			],
+			"headers": [],
+			"responses": [
+				{
+					"id": "1cace919-82b6-44e8-c2a3-77a47ab5ec22",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"id": "b377a68d-78de-496b-e946-38cbdceac17f",
+							"name": "urenco_uqform",
+							"objectType": "object"
+						}
+					]
+				},
+				{
+					"id": "7d79f4b1-bd5d-4b62-9ac8-06efb4be6200",
+					"status": "400",
+					"description": "",
+					"headers": [],
+					"content": [
+						{
+							"id": "3a0f8112-7ee3-46fe-eedd-32f3d10ba359",
+							"name": "Error",
+							"objectType": "object"
+						}
+					]
+				}
+			],
+			"content": [],
+			"auth": [],
+			"endpoints": []
+		}
+	],
+	"definitions": [
+		{
+			"id": "67a52cd0-d384-47af-f65e-bd892d207554",
+			"name": "urenco_uqform",
+			"properties": [
+				{
+					"id": "767b5bfc-14c3-4122-ca17-6fa8cc5976bd",
+					"parent": "",
+					"name": "id",
+					"description": "Unique record ID",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "485b4753-13fe-4924-9aa5-6f70c3fcf68b",
+					"parent": "",
+					"name": "cylinder",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "f839dff7-9d59-4ac1-9a10-eace74b21b87",
+					"parent": "",
+					"name": "limsId",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "e9833420-0204-49cf-bbc4-a801aa5d544d",
+					"parent": "",
+					"name": "dispenseDate",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "292cd1a7-cdd0-4cc8-81ee-5b7fa3f39703",
+					"parent": "",
+					"name": "hotBox",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "ca732ca6-3e05-4e1e-c318-0a31881a89d7",
+					"parent": "",
+					"name": "pigeonHole",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "2fbede9a-1121-4ffa-812d-e12be646d84d",
+					"parent": "",
+					"name": "checkPaperworkInitial",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "dc329e0d-e620-48b0-8897-8f016773d429",
+					"parent": "",
+					"name": "checkBottles",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "4edf0e1a-342d-4d70-d53b-08e6b21a7812",
+					"parent": "",
+					"name": "checkLIMS",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "aa92836a-95dc-4f31-a1da-8806288af23d",
+					"parent": "",
+					"name": "checkDesignationLinks",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "1dab4a20-30ab-4c5d-9e3e-32864dabcd16",
+					"parent": "",
+					"name": "bsiNumberP10",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "973fcbe2-f78c-40ca-b372-7234e0bff9c7",
+					"parent": "",
+					"name": "weightHexTotal",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "12d81d25-e490-4b78-f868-81366a9ee993",
+					"parent": "",
+					"name": "bsiWeightP10_Hex",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "c2cb7cdf-4849-4eca-bca7-d9e1fa974a5a",
+					"parent": "",
+					"name": "bsiWeightP10Empty",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5d85763b-8cb9-4b07-8b44-19630edb7fa8",
+					"parent": "",
+					"name": "bsiWeightHex",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5b3c2fce-9663-47ff-b2ca-230e9a67414c",
+					"parent": "",
+					"name": "bsiWeightWater",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "635bc722-4857-4ed1-b106-5d72cb279231",
+					"parent": "",
+					"name": "assayWeightP10_Hex",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "58ad804f-2161-4c7f-e56c-8567c263e65f",
+					"parent": "",
+					"name": "assayWeightP10Empty",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "d6c0671b-d542-4c23-9833-a4465086f5b6",
+					"parent": "",
+					"name": "assayWeightHex",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "f2735122-8f91-413b-a31c-41889ab6907b",
+					"parent": "",
+					"name": "assayWeightEmptyBottle",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5452259b-ebbc-479a-e544-92188e251f18",
+					"parent": "",
+					"name": "assayWeightWater",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "263a41ed-22b1-442d-a1a4-7db70f4f1119",
+					"parent": "",
+					"name": "assayWeightHydrolysedWater",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "a61b3e32-0000-4d2e-8869-cc583337d45f",
+					"parent": "",
+					"name": "assayWeightP10_Bottle",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "b590b941-2f73-4299-a16b-bc5d97996483",
+					"parent": "",
+					"name": "assayWeightAssaySolution",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5e2b6ce9-37e4-42e6-9ac6-94ac1b76392b",
+					"parent": "",
+					"name": "checkLabel",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "323cfae2-584c-433e-adb4-6f8fe39f8562",
+					"parent": "",
+					"name": "refBottleWeight",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "563178fe-d3d2-4b1e-84f3-bda1f48bb665",
+					"parent": "",
+					"name": "refBottleDisposal",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5c0f89eb-3bb6-4d9d-c063-37be904a94de",
+					"parent": "",
+					"name": "refBottleDisposalOrder",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "3b6f207e-4b07-4768-b8ef-f5118c6705e7",
+					"parent": "",
+					"name": "outBottleDisposalOrder",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "f32bfa02-40e7-40ab-ad05-db844c3b1ca9",
+					"parent": "",
+					"name": "customerP10Location",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "897a6903-6b81-459a-b2b5-855a0a41bb12",
+					"parent": "",
+					"name": "checkExcelSampleDetails",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "0b86068f-9c1b-40dc-f5b0-45d8a0fda994",
+					"parent": "",
+					"name": "checkExcelTrapDetails",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "24be7fcd-5f72-4673-bd46-6ca8486a2219",
+					"parent": "",
+					"name": "checkCriticalitySheet",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "eba591a8-5233-4455-b254-4adbbbeed180",
+					"parent": "",
+					"name": "checkSAPInformation",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "866a1fe6-d528-4f3a-8372-1a5cbd889c2b",
+					"parent": "",
+					"name": "checkPhysicalBottleLocation",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "0dd1228f-7851-40ea-e29f-08dcccb76a6f",
+					"parent": "",
+					"name": "checkLIMSCheck",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5aaf516f-dac5-46dd-8cc3-6d7870e6a682",
+					"parent": "",
+					"name": "checkPaperwork",
+					"objectType": "boolean",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "1b2726a0-486d-4c92-d6ba-6e60d6247bee",
+					"parent": "",
+					"name": "dispensedBy",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "86bd73b8-a796-48af-c653-c255f9b152cc",
+					"parent": "",
+					"name": "approvalDate",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "1f38982d-abac-40a2-c192-07f305ecfef0",
+					"parent": "",
+					"name": "approvedBy",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "cf6ea4d3-8868-442c-bbca-ee34871032bf",
+					"parent": "",
+					"name": "status",
+					"objectType": "integer",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "d10bf511-fe2a-4595-b986-c520e46cca8d",
+					"parent": "",
+					"name": "plqNumber",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "f1220bba-aadf-48f3-84ac-2c7154ee1608",
+					"parent": "",
+					"name": "refBottle",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5f33b649-7d02-434a-a102-a9a804168694",
+					"parent": "",
+					"name": "arbBottle",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "4ee1c75f-74b8-4141-ce00-474d11302a59",
+					"parent": "",
+					"name": "outBottle",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "891da332-14a3-4cb3-fda3-9367d18fcf86",
+					"parent": "",
+					"name": "enrichment",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "d72c5d61-f0f8-46ab-ce90-24cc81b825a9",
+					"parent": "",
+					"name": "processOrder",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "df211fd9-4c53-4528-b57d-9aba53798a34",
+					"parent": "",
+					"name": "salesOrder",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "ac3baf5d-d175-4d2f-cc20-08c81112ddf9",
+					"parent": "",
+					"name": "reportingDate",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "5d17eccc-2f8e-4869-c816-f1c4d9fee0ca",
+					"parent": "",
+					"name": "processOrderP10",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "e4dd88e1-cac8-437e-ad42-80921a937526",
+					"parent": "",
+					"name": "createdAt",
+					"description": "Date when record was created",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "49e96ce2-50d1-4c49-ee97-b96d3fcd66fb",
+					"parent": "",
+					"name": "createdBy",
+					"description": "Created By",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "da81b37e-ff60-4699-c361-705fcb8a1a71",
+					"parent": "",
+					"name": "updatedAt",
+					"description": "Date when record was updated",
+					"objectType": "number",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				},
+				{
+					"id": "e832156f-2ef2-4618-f6d7-c49be8f41153",
+					"parent": "",
+					"name": "updatedBy",
+					"description": "Updated By",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [],
+					"showNameField": true
+				}
+			]
+		},
+		{
+			"id": "78c3807d-7252-437e-a685-a1662dc2cd1f",
+			"name": "Error",
+			"properties": [
+				{
+					"id": "a2266ef5-d859-41a1-c5bb-72f9beebf492",
+					"parent": "",
+					"name": "status",
+					"objectType": "string"
+				},
+				{
+					"id": "5e793707-f2fc-4501-df3d-acf368ae4540",
+					"parent": "",
+					"name": "message",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "ccc60c27-14b8-4e4a-95ee-d05586e9536d",
+			"name": "count",
+			"properties": [
+				{
+					"id": "a56cf684-2278-4835-ac80-7a3907bee1a4",
+					"parent": "",
+					"name": "count",
+					"objectType": "number"
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "API urenco_uqform",
+	"endpoint": "/api/entity",
+	"ver": "23.5.25.2129",
+	"version": null,
+	"description": null,
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "table",
+	"about": null,
+	"enableProxy": false,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": true,
+	"useOwnProcess": false,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}

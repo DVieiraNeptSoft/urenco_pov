@@ -1,0 +1,1 @@
+DialogFacilitySubArea.close();

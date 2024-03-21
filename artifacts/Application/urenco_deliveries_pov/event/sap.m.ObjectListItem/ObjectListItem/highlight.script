@@ -1,0 +1,18 @@
+if (typeof TYPE === "undefined" || TYPE === null || TYPE === "") {
+    return;
+}
+var formattedText = TYPE;
+
+switch (TYPE) {
+    case "S":
+        formattedText = "Success";
+        break;
+    case "W":
+        formattedText = "Warning";
+        break;
+    case "E":
+        formattedText = "Error";
+        break;
+}
+
+return formattedText;

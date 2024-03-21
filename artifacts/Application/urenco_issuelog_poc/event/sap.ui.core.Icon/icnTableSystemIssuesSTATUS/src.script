@@ -1,0 +1,7 @@
+if (typeof STATUS === "undefined" || STATUS === null || STATUS === "") { return; }  
+
+if(STATUS == "Closed"){
+    return "sap-icon://complete";
+}else{
+    return "sap-icon://in-progress";
+}

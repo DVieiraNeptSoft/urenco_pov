@@ -1,0 +1,9 @@
+var p10 = modelformP10.getData();
+
+options = {
+    parameters: {
+        where: JSON.stringify({ id: p10.id }),
+    }
+};
+
+apiapiDeleteP10(options);

@@ -1,0 +1,17 @@
+var selectedFacilityKey = oEvent.getParameter("selectedItem").getKey();
+MultiComboBoxSubArea.removeAllItems();
+
+// Apply the filter to the Subarea ComboBox based on the selected Facility keys
+var subareaBinding = MultiComboBoxSubArea.getBinding("items");
+var filters = [];
+
+filters.push(
+    new sap.ui.model.Filter("FACILITY_ID", sap.ui.model.FilterOperator.EQ, selectedFacilityKey)
+); // First key as an individual filter
+
+subareaBinding.filter(filters); // Combine filters with OR condition
+if (MultiComboBoxSubArea.getItems()[0].getKey() == "") {
+    MultiComboBoxSubArea.setEnabled(false);
+} else {
+    MultiComboBoxSubArea.setEnabled(true);
+}

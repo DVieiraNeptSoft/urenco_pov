@@ -1,0 +1,122 @@
+{
+	"id": "2b3ca98b-fc09-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-13T15:11:23.350Z",
+	"createdBy": "masoom",
+	"fields": [
+		{
+			"id": "f19cde43-4863-4546-b245-8e056b9ca975",
+			"fieldName": "ISSUE_ID",
+			"fieldType": "bigint",
+			"isUnique": true,
+			"description": "Issue ID"
+		},
+		{
+			"id": "c5c3888a-c1e2-4355-9355-aa9b285f6175",
+			"fieldName": "SAP_REFERENCE",
+			"fieldType": "mediumtext",
+			"isUnique": true,
+			"description": "SAP Reference"
+		},
+		{
+			"id": "4a9347e0-4f73-4d35-ad06-b13d6d8bf949",
+			"fieldName": "ISSUE_TITLE",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Issue title",
+			"isNullable": true
+		},
+		{
+			"id": "f1a6217d-e8c5-41e4-d278-c485ea038b5f",
+			"fieldName": "DATE_RAISED",
+			"fieldType": "timestamp",
+			"isUnique": false,
+			"description": "Date Raised"
+		},
+		{
+			"id": "b7d70f62-7be2-4cf3-b290-dd7f7e6c8d1e",
+			"fieldName": "CONSEQUENCE_SCORE",
+			"fieldType": "integer",
+			"isUnique": false,
+			"description": "Consequence Score",
+			"isNullable": true
+		},
+		{
+			"id": "bf084b0b-f09c-4852-c83f-893153cf7242",
+			"fieldName": "PROBABILITY_SCORE",
+			"fieldType": "integer",
+			"isUnique": false,
+			"description": "Probability Score",
+			"isNullable": true
+		},
+		{
+			"id": "7f93d782-e4fe-4fd1-a2b8-65b33212c2c7",
+			"fieldName": "SCORE",
+			"fieldType": "integer",
+			"isUnique": false,
+			"description": "Score",
+			"isNullable": true,
+			"default": "0"
+		},
+		{
+			"id": "34b3a668-d625-47ac-eda5-aabd0aa5db2c",
+			"fieldName": "DELIVERY_ROUTE",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Delivery Route",
+			"isNullable": false
+		},
+		{
+			"id": "d4e1583c-1c5d-4da4-e266-be5f07e25458",
+			"fieldName": "INVESTMENT_YEAR",
+			"fieldType": "integer",
+			"isUnique": false,
+			"description": "Investment Year"
+		},
+		{
+			"id": "ceed0ff6-1fe9-47eb-c1af-73294703a578",
+			"fieldName": "STATUS",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Status",
+			"isNullable": true
+		},
+		{
+			"id": "df6b9f92-8b9a-454f-8dda-e18f9fd70aad",
+			"fieldName": "ACTION_ON",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "a3d0bc4a-3dd2-46b2-b077-75ad15997999",
+			"fieldName": "ACTIONS_REQUIRED",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "f0ce7000-9c48-4e1b-a773-a729d27e0808",
+			"fieldName": "SUB_AREA",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "d4d80f3e-e48e-4fbe-c985-03f7cf140d61",
+			"fieldName": "FACILITY",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_issue",
+	"description": "Issue Logs for Urenco",
+	"ver": "24.3.21.1611",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

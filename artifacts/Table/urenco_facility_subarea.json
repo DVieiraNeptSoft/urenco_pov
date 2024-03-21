@@ -1,0 +1,47 @@
+{
+	"id": "b5af92d2-020a-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-13T15:56:16.813Z",
+	"createdBy": "masoom",
+	"fields": [
+		{
+			"id": "2f6921b7-2b59-4e03-eab3-0f1558f9ec9b",
+			"fieldName": "FACILITY_ID",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Facility ID"
+		},
+		{
+			"id": "379883dd-b264-43fb-bbbc-73b5df8a9cde",
+			"fieldName": "FACILITY",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Facility Description"
+		},
+		{
+			"id": "80cd8fe7-e9a6-490b-e0f3-d873423a417e",
+			"fieldName": "SUBAREA_ID",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Sub Area ID",
+			"isNullable": true
+		},
+		{
+			"id": "aca50295-cae0-48dc-f304-f006f6b38423",
+			"fieldName": "SUBAREA",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Sub Area Description",
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_facility_subarea",
+	"description": "Master List for Facility and Subarea Selection Field",
+	"ver": "24.3.21.1611",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

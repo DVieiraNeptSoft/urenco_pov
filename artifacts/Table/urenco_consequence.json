@@ -1,0 +1,72 @@
+{
+	"id": "ddfa2226-7b0b-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-15T12:50:07.626Z",
+	"createdBy": "masoom",
+	"fields": [
+		{
+			"id": "fa8bcc53-43d5-4dca-ba08-1188609365b6",
+			"fieldName": "Score",
+			"fieldType": "integer",
+			"isUnique": true,
+			"description": "Score"
+		},
+		{
+			"id": "f18bcdde-f73c-4a2c-ac55-aea4ddad8d24",
+			"fieldName": "Safety",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Safety",
+			"isNullable": true
+		},
+		{
+			"id": "4150490a-38a8-4ee0-ca34-27be09926d43",
+			"fieldName": "Security",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Security",
+			"isNullable": true
+		},
+		{
+			"id": "9933b715-acbe-424e-b246-00e451ecec42",
+			"fieldName": "Environment",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Environment",
+			"isNullable": true
+		},
+		{
+			"id": "c336b395-47ca-408b-84f9-21ed5ed2feb1",
+			"fieldName": "Sustainability",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Sustainability (Scale of opportuinity)",
+			"isNullable": true
+		},
+		{
+			"id": "e3522cf3-cf1b-4714-b0b9-9d8b81c21d54",
+			"fieldName": "BusinessImpact",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Business Impact",
+			"isNullable": true
+		},
+		{
+			"id": "a20374f7-f007-4db2-fa55-a6becb343096",
+			"fieldName": "Production",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Production",
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_consequence",
+	"description": "Consequence Master Data Table",
+	"ver": "24.3.21.1610",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

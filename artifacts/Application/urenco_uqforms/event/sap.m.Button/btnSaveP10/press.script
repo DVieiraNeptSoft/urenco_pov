@@ -1,0 +1,23 @@
+var p10 = modelformP10.getData();
+var uqform = modelPageForm.getData();
+
+if (p10 !== null && p10.id !== undefined && p10.id !== "") {
+    //Ja existe
+    options = {
+        parameters: {
+            where: JSON.stringify({ id: p10.id }),
+        },
+        data: p10,
+    };
+} else {
+    //Criando novo
+    p10.uqFormId = uqform.id;
+    options = {
+        parameters: {
+            where: "",
+        },
+        data: p10,
+    };
+}
+
+apiapiSaveP10s(options);

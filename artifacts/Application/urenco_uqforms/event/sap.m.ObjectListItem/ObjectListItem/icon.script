@@ -1,0 +1,16 @@
+if (typeof TYPE === "undefined" || TYPE === null || TYPE === "") { return; }  
+var formattedText = TYPE; 
+
+switch (TYPE) {
+    case "S":
+        formattedText = "sap-icon://message-success";
+        break;
+    case "W":
+        formattedText = "sap-icon://message-warning";
+        break;
+    case "E":
+        formattedText = "sap-icon://message-error";
+        break;
+}
+
+return formattedText;

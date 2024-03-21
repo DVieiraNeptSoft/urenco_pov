@@ -1,0 +1,45 @@
+{
+	"id": "bada5f22-340c-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-16T10:54:18.176Z",
+	"createdBy": "masoom",
+	"fields": [
+		{
+			"id": "d255e6b9-d82f-4105-bdc0-4d6e630b308d",
+			"fieldName": "NotificationId",
+			"fieldType": "bigint",
+			"isUnique": false,
+			"description": "Notification ID"
+		},
+		{
+			"id": "9259e3b0-8140-45ae-f5e0-3766a1d8f03e",
+			"fieldName": "ActionRequired",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Action Required"
+		},
+		{
+			"id": "fd363c13-73b1-4b24-e90f-922c8849cb8a",
+			"fieldName": "ActionOn",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Assigned To"
+		},
+		{
+			"id": "a74bbfff-2ed5-4817-c95e-d508beb7c160",
+			"fieldName": "Flag",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Flag"
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_issue_actions",
+	"description": "Actions for Issues and Assignment Table",
+	"ver": "24.3.21.1611",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

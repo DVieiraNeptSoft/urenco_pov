@@ -1,0 +1,48 @@
+{
+	"id": "4b868ef9-810b-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-15T13:38:59.390Z",
+	"createdBy": "masoom",
+	"fields": [
+		{
+			"id": "e8d83896-feea-4783-ee14-91f6ec4f8d23",
+			"fieldName": "Score",
+			"fieldType": "integer",
+			"isUnique": true,
+			"description": "Score"
+		},
+		{
+			"id": "158b6d99-f22c-4885-c773-3d25879237c7",
+			"fieldName": "TimeFrame",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Time Frame",
+			"isNullable": true
+		},
+		{
+			"id": "8609ccb4-76ef-4dd1-b39f-958294d4c71e",
+			"fieldName": "SES",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Safety, Environmental and Security (SES*)",
+			"isNullable": true
+		},
+		{
+			"id": "9cfc51a4-a1f6-441e-8764-11e0c7123923",
+			"fieldName": "SustainabilityPeriod",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Sustainability Payback Period",
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_probability",
+	"description": "Probability Master Data ",
+	"ver": "24.3.21.1612",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

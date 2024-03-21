@@ -1,0 +1,25 @@
+
+var uniqueValues = [];
+var uniqueKeys = new Set();
+xhr.responseJSON.forEach(function(item) {
+  if (!uniqueKeys.has(item.FACILITY_ID)) {
+    uniqueKeys.add(item.FACILITY_ID);
+    uniqueValues.push({
+      "FACILITY_ID": item.FACILITY_ID,
+      "FACILITY": item.FACILITY
+    });
+  }
+});
+
+
+
+modelSelectFacility.setProperty("/", uniqueValues);//
+MultiComboBoxSubArea.bindItems({
+  path: "/", // Replace with your OData entity set path
+  template: new sap.ui.core.ListItem({
+    key: "{SUBAREA_ID}", // Replace with the key field from your OData entity
+    text: "{SUBAREA}" // Replace with the text field from your OData entity
+  }),
+  filters: [new sap.ui.model.Filter("FACILITY_ID", sap.ui.model.FilterOperator.EQ, uniqueValues[0].FACILITY_ID)], // Initially filter with an empty Facility ID
+});
+//modelmcbFormIssueInfoSUB_AREA.setData(xhr.responseJSON);

@@ -1,0 +1,112 @@
+[
+	{
+		"id": "ef27d53d-9d4e-4200-a009-caa52bdae2f1",
+		"createdAt": "1686836599635",
+		"updatedAt": "1686836599635",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 1,
+		"TimeFrame": "Consequence unlikely in the next 10 years",
+		"SES": "SES* consequence in the next 1,000,000 years (10-6)",
+		"SustainabilityPeriod": "Payback > 10 years"
+	},
+	{
+		"id": "cf4d57ef-d356-4174-b5fc-6208c7e17b95",
+		"createdAt": "1686836475780",
+		"updatedAt": "1686836475780",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 7,
+		"TimeFrame": "Consequence expected within the next 12 months",
+		"SES": "N/A",
+		"SustainabilityPeriod": "Payback < 5 years"
+	},
+	{
+		"id": "c8aee4d5-4f6a-43d0-9b08-b066023253b0",
+		"createdAt": "1686836541128",
+		"updatedAt": "1686836541128",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 3,
+		"TimeFrame": "Consequence expected within the next 5-7 years",
+		"SES": "SES* consequence in the next 100,000 years (10-5)",
+		"SustainabilityPeriod": "Payback < 8 years"
+	},
+	{
+		"id": "b572c8ce-93a7-438b-8554-2621f6a2ab03",
+		"createdAt": "1686836524906",
+		"updatedAt": "1686836524906",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 6,
+		"TimeFrame": "Consequence expected within the next 24 months",
+		"SES": "SES* consequence in the next 10,000 years (10-4)",
+		"SustainabilityPeriod": "-"
+	},
+	{
+		"id": "abe5461a-a08c-49b0-a42e-c8b6a3d877a6",
+		"createdAt": "1686836555890",
+		"updatedAt": "1686836555890",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 2,
+		"TimeFrame": "Consequence expected within the next 7-10 years",
+		"SES": "N/A",
+		"SustainabilityPeriod": "Payback < 10 years"
+	},
+	{
+		"id": "97948a57-6971-4dfa-8993-5f9878932d84",
+		"createdAt": "1686836475780",
+		"updatedAt": "1686836475780",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 9,
+		"TimeFrame": "Occurring or ongoing, temporary work around acceptable for up to 3 months",
+		"SES": "SES* consequence in the next 100 years (10-2)",
+		"SustainabilityPeriod": "Payback < 1 year"
+	},
+	{
+		"id": "7651cf22-fc3d-42ee-acb1-5ef44caa87db",
+		"createdAt": "1686836524906",
+		"updatedAt": "1686836524906",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 4,
+		"TimeFrame": "Consequence expected within the next 3-5 years",
+		"SES": "N/A",
+		"SustainabilityPeriod": "N/A"
+	},
+	{
+		"id": "68989f33-8328-4675-93da-29390fe2c33e",
+		"createdAt": "1686836524906",
+		"updatedAt": "1686836524906",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 5,
+		"TimeFrame": "Consequence expected within the next 2-3 years",
+		"SES": "N/A",
+		"SustainabilityPeriod": "Payback < 6 years"
+	},
+	{
+		"id": "27c2bddb-c54d-4588-8346-bbd6a8c42887",
+		"createdAt": "1686836475780",
+		"updatedAt": "1686836475780",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 10,
+		"TimeFrame": "Occurrence ongoing - no work around available",
+		"SES": "SES* consequence in the next 10 years (10-1)",
+		"SustainabilityPeriod": "Payback < 0.5 years"
+	},
+	{
+		"id": "110e964f-1bab-434b-a0ef-bdffb225e20b",
+		"createdAt": "1686836475780",
+		"updatedAt": "1686836475780",
+		"createdBy": "masoom",
+		"updatedBy": "masoom",
+		"Score": 8,
+		"TimeFrame": "Occurring or ongoing, temporary work around acceptable for up to 12 months",
+		"SES": "SES* consequence in the next 1000 years (10-3)",
+		"SustainabilityPeriod": "Payback < 3 years"
+	}
+]

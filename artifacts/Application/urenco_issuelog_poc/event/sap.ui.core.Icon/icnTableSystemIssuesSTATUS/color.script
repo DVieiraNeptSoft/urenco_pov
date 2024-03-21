@@ -1,0 +1,6 @@
+if (typeof STATUS === "undefined" || STATUS === null || STATUS === "") { return; }  
+if(STATUS == "Closed"){
+    return "green";
+}else{
+    return "orange";
+}

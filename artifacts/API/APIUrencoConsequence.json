@@ -1,0 +1,250 @@
+{
+	"id": "0969d758-7c0b-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-15T12:58:39.966Z",
+	"createdBy": "masoom",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "86c96a1d-7a2f-4b09-c15b-6b0d03719b14",
+			"path": "/urenco_consequence",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				},
+				{
+					"name": "select",
+					"description": "fieldName1,fieldName2,fieldName3"
+				},
+				{
+					"name": "take",
+					"description": "Limit (paginated) - max number of entities that should be taken"
+				},
+				{
+					"name": "skip",
+					"description": "Offset (paginated) from where entities should be taken"
+				},
+				{
+					"name": "order",
+					"description": "{\"fieldName1\": \"ASC\", \"fieldName2\": \"DESC\"}",
+					"default": "{\"Score\": \"DESC\"}"
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_consequence"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "2dc91e57-5b66-458a-dd0f-50a0afb5fb82",
+			"path": "/urenco_consequence/count",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "count"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		}
+	],
+	"definitions": [
+		{
+			"id": "20873908-d126-42d8-acf2-c200932204a4",
+			"name": "urenco_consequence",
+			"properties": [
+				{
+					"id": "60225054-ce85-49f9-efa5-acee2d5e0aab",
+					"parent": "",
+					"name": "id",
+					"description": "Unique record ID",
+					"objectType": "string"
+				},
+				{
+					"id": "ad10b727-e3a6-4fa7-a4c6-abb262345e30",
+					"parent": "",
+					"name": "Score",
+					"description": "Score",
+					"objectType": "integer"
+				},
+				{
+					"id": "abede5e5-6c26-4ec2-cbde-e53dcc036218",
+					"parent": "",
+					"name": "Safety",
+					"description": "Safety",
+					"objectType": "string"
+				},
+				{
+					"id": "3ad28bbb-140e-43ee-8d65-a80c55376e82",
+					"parent": "",
+					"name": "Security",
+					"description": "Security",
+					"objectType": "string"
+				},
+				{
+					"id": "a9be0178-79a1-4f61-975b-4cd992f69fc8",
+					"parent": "",
+					"name": "Environment",
+					"description": "Environment",
+					"objectType": "string"
+				},
+				{
+					"id": "63469c4f-40b1-4824-8e53-8980c16ac02d",
+					"parent": "",
+					"name": "Sustainability",
+					"description": "Sustainability (Scale of opportuinity)",
+					"objectType": "string"
+				},
+				{
+					"id": "be814627-c5d2-4c37-9daa-b4a17e42641b",
+					"parent": "",
+					"name": "BusinessImpact",
+					"description": "Business Impact",
+					"objectType": "string"
+				},
+				{
+					"id": "a8e327f4-6b59-4db0-9c37-3d0526dc70ba",
+					"parent": "",
+					"name": "Production",
+					"description": "Production",
+					"objectType": "string"
+				},
+				{
+					"id": "776d1506-67a6-48fa-d48e-2d3dc2e43144",
+					"parent": "",
+					"name": "createdAt",
+					"description": "Date when record was created",
+					"objectType": "number"
+				},
+				{
+					"id": "b3c63194-3912-4003-d8fd-ce3b2b046816",
+					"parent": "",
+					"name": "createdBy",
+					"description": "Created By",
+					"objectType": "string"
+				},
+				{
+					"id": "43e57bf6-2f5f-4ab2-dc7f-fa0b07777974",
+					"parent": "",
+					"name": "updatedAt",
+					"description": "Date when record was updated",
+					"objectType": "number"
+				},
+				{
+					"id": "0813f421-fe12-4d93-d51c-4e519b381510",
+					"parent": "",
+					"name": "updatedBy",
+					"description": "Updated By",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "bea7d7cf-6d39-455c-c96f-f2f626c3f1e8",
+			"name": "Error",
+			"properties": [
+				{
+					"id": "6ff98880-b95c-435c-853b-31b67d3c440a",
+					"parent": "",
+					"name": "status",
+					"objectType": "string"
+				},
+				{
+					"id": "694f5581-81ea-4420-f6ce-d236603aedb2",
+					"parent": "",
+					"name": "message",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "54d0cc75-0aa7-4049-809e-9e9dedd1b536",
+			"name": "count",
+			"properties": [
+				{
+					"id": "c7c728bd-e3a7-4542-e778-a470b4cb9fa2",
+					"parent": "",
+					"name": "count",
+					"objectType": "number"
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "APIUrencoConsequence",
+	"endpoint": "/api/entity",
+	"ver": "23.6.15.1330",
+	"version": null,
+	"description": "Consequence Master data operation",
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "table",
+	"about": null,
+	"enableProxy": false,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}

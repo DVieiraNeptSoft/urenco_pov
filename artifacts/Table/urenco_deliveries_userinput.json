@@ -1,0 +1,129 @@
+{
+	"id": "edc11bfd-44fa-ed11-907c-000d3a654fb6",
+	"createdAt": "2023-05-24T15:09:37.526Z",
+	"createdBy": "daniel.vieira@neptune-software.com",
+	"fields": [
+		{
+			"id": "5f73a996-f243-43fb-f3a2-f5a27ef6aa1b",
+			"fieldName": "vbeln",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true,
+			"description": "SAP Delivery Number"
+		},
+		{
+			"id": "48c283b4-01fb-4610-bd03-ae8c0e013384",
+			"fieldName": "tmc",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"isNullable": true,
+			"description": "TMC Number"
+		},
+		{
+			"id": "72148d12-fabc-4115-9fff-304e395e3678",
+			"fieldName": "observations",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true,
+			"description": "Free text observations"
+		},
+		{
+			"id": "01ff8173-e187-48f6-d00f-1433dfe63619",
+			"fieldName": "read",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"description": "Information has been read",
+			"isNullable": true
+		},
+		{
+			"id": "ef2d046e-f4fb-46c4-dc73-d6f6e27ab41b",
+			"fieldName": "deliveryDate",
+			"fieldType": "timestamp",
+			"isUnique": false,
+			"description": "Date of delivery",
+			"isNullable": true
+		},
+		{
+			"id": "df653341-d8ed-42ad-b8d0-ea42ad3dba2f",
+			"fieldName": "shipToName",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Ship To Name",
+			"isNullable": true
+		},
+		{
+			"id": "6adb78f2-f1b5-4afb-daca-9e601b2333cf",
+			"fieldName": "shipToAddress",
+			"fieldType": "text",
+			"isUnique": false,
+			"description": "Ship To Address",
+			"isNullable": true
+		},
+		{
+			"id": "872e70e4-1c93-4b4d-fbfe-3ddf9f4e471f",
+			"fieldName": "shipToCity",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Ship To City",
+			"isNullable": true
+		},
+		{
+			"id": "ac991647-b262-47f4-bb33-cf4f68274258",
+			"fieldName": "shipToState",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Ship To State",
+			"isNullable": true
+		},
+		{
+			"id": "309bce4d-efee-490b-92fa-3499b799e20b",
+			"fieldName": "shipToCountry",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Ship To Country",
+			"isNullable": true
+		},
+		{
+			"id": "dc239592-b1f5-4636-85ad-96df37d4b653",
+			"fieldName": "deliveryType",
+			"fieldType": "integer",
+			"isUnique": false,
+			"description": "Delivery Type",
+			"isNullable": true
+		},
+		{
+			"id": "dcb2c342-2eae-453d-b755-4417884aea0c",
+			"fieldName": "unitType",
+			"fieldType": "integer",
+			"isUnique": false,
+			"description": "Unit Type",
+			"isNullable": true
+		},
+		{
+			"id": "2287cb11-5e54-4487-c9dc-d93faa89a40b",
+			"fieldName": "quantity",
+			"fieldType": "integer",
+			"isUnique": false,
+			"description": "Quantity",
+			"isNullable": true
+		},
+		{
+			"id": "2cce3664-58b8-4486-aab9-8a11fc47e926",
+			"fieldName": "referenceNumber",
+			"fieldType": "mediumtext",
+			"isUnique": false,
+			"description": "Delivery Reference Number",
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "urenco_deliveries_userinput",
+	"description": null,
+	"ver": "23.6.1.1137",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"rolesRead": [],
+	"rolesWrite": []
+}

@@ -1,0 +1,229 @@
+{
+	"id": "5eff82cc-820b-ee11-907c-000d3ab76cc2",
+	"createdAt": "2023-06-15T13:44:51.023Z",
+	"createdBy": "masoom",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "611252aa-fed9-4430-cdbd-9643fa86fbbc",
+			"path": "/urenco_probability",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				},
+				{
+					"name": "select",
+					"description": "fieldName1,fieldName2,fieldName3"
+				},
+				{
+					"name": "take",
+					"description": "Limit (paginated) - max number of entities that should be taken"
+				},
+				{
+					"name": "skip",
+					"description": "Offset (paginated) from where entities should be taken"
+				},
+				{
+					"name": "order",
+					"description": "{\"fieldName1\": \"ASC\", \"fieldName2\": \"DESC\"}",
+					"default": "{\"Score\": \"DESC\"}"
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "urenco_probability"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "cc9a3072-4a0a-43e4-ed42-3c6a915876dc",
+			"path": "/urenco_probability/count",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "count"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		}
+	],
+	"definitions": [
+		{
+			"id": "e8cb870b-54a9-4176-b04c-81289cc34bef",
+			"name": "urenco_probability",
+			"properties": [
+				{
+					"id": "4126d440-a4dd-4fa2-9a42-d07e198a6e91",
+					"parent": "",
+					"name": "id",
+					"description": "Unique record ID",
+					"objectType": "string"
+				},
+				{
+					"id": "2bba6af7-5c31-489f-eae6-a1d8beb8cf7d",
+					"parent": "",
+					"name": "Score",
+					"description": "Score",
+					"objectType": "integer"
+				},
+				{
+					"id": "7c6424de-a858-46bb-b0a6-3808c73a478a",
+					"parent": "",
+					"name": "TimeFrame",
+					"description": "Time Frame",
+					"objectType": "string"
+				},
+				{
+					"id": "34fd381e-5153-484a-ea61-14fa52359982",
+					"parent": "",
+					"name": "SES",
+					"description": "Safety, Environmental and Security (SES*)",
+					"objectType": "string"
+				},
+				{
+					"id": "34e58206-a4dc-41ce-87c8-aafd21ef7cff",
+					"parent": "",
+					"name": "SustainabilityPeriod",
+					"description": "Sustainability Payback Period",
+					"objectType": "string"
+				},
+				{
+					"id": "5808b9ef-11d3-45c2-a121-5913dc6c9a18",
+					"parent": "",
+					"name": "createdAt",
+					"description": "Date when record was created",
+					"objectType": "number"
+				},
+				{
+					"id": "1fae80f4-cf55-40e7-bd71-79cf980669ae",
+					"parent": "",
+					"name": "createdBy",
+					"description": "Created By",
+					"objectType": "string"
+				},
+				{
+					"id": "ce1b4a10-9f4c-4758-eba9-043bb556986a",
+					"parent": "",
+					"name": "updatedAt",
+					"description": "Date when record was updated",
+					"objectType": "number"
+				},
+				{
+					"id": "8410fc6f-e5da-45be-aa1d-9a39504d6ca6",
+					"parent": "",
+					"name": "updatedBy",
+					"description": "Updated By",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "16c91017-e52a-4c94-a0ec-b88749989106",
+			"name": "Error",
+			"properties": [
+				{
+					"id": "cf7268b4-39cd-473f-b0bc-d99ec44bf406",
+					"parent": "",
+					"name": "status",
+					"objectType": "string"
+				},
+				{
+					"id": "956916c3-ad57-4d8b-c8b8-6628e91d85fe",
+					"parent": "",
+					"name": "message",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "e72df044-b52d-449c-9bb2-d6f11e15d550",
+			"name": "count",
+			"properties": [
+				{
+					"id": "60136aa2-16ab-432d-a19b-132d69ead966",
+					"parent": "",
+					"name": "count",
+					"objectType": "number"
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "API urenco_probability",
+	"endpoint": "/api/entity",
+	"ver": "23.6.15.1345",
+	"version": null,
+	"description": "Urenco Probability get Operations",
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "table",
+	"about": null,
+	"enableProxy": false,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "aa791c7a-abf8-ed11-907c-000d3a654fb6",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}
